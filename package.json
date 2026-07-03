@@ -2,6 +2,7 @@
   "name": "leetcode-learner",
   "version": "0.1.0",
   "private": true,
+  "license": "MIT",
   "scripts": {
     "predev": "bun prisma/build-cases.ts",
     "dev": "next dev",

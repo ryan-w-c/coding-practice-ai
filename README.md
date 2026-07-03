@@ -90,3 +90,7 @@ The dev/start scripts automatically rebuild the generated test-case corpus (`pri
 | `bun seed` | Seed patterns/problems into the database |
 | `bun test:unit` | Run unit tests |
 | `bun run build:cases --force` | Force-rebuild the generated hidden test-case corpus |
+
+## License
+
+[MIT](LICENSE)
