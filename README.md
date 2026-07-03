@@ -37,12 +37,18 @@ This app executes submitted code directly on the host — it needs a real, persi
 ```bash
 bun install
 
+# Prisma's CLI only reads .env (not .env.local), so DATABASE_URL needs to be
+# in both files — .env for `prisma migrate`/`seed`, .env.local for `next dev`.
+# .env
+DATABASE_URL="file:./dev.db"
+
 # .env.local
 ANTHROPIC_API_KEY=sk-ant-...
 DATABASE_URL="file:./dev.db"
 
 bunx prisma migrate deploy
-bun seed          # seeds patterns/problems into the DB
+bun seed                    # seeds the 102 vendored problems
+bun prisma/seed-authored.ts # seeds the 49 authored problems (tries, DP, bit manipulation, etc.)
 
 bun dev
 ```
