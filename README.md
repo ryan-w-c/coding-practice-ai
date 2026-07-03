@@ -4,6 +4,21 @@ An adaptive coding-interview trainer: pattern-based practice problems, a real mu
 
 This is **not** a wrapper around a chat window. The judge runs your actual code against generated hidden test suites (including a dual-oracle brute-force cross-check to catch bugs the obvious tests miss), and the tutor is scoped to nudge you toward the next insight rather than hand you a solution.
 
+## Quick start
+
+Requires [Bun](https://bun.sh/), Python 3, and a JDK already on `PATH` (see [Requirements](#requirements)).
+
+```bash
+bun install
+echo 'DATABASE_URL="file:./dev.db"' > .env
+printf 'ANTHROPIC_API_KEY=sk-ant-...\nDATABASE_URL="file:./dev.db"\n' > .env.local  # add your real key
+bunx prisma migrate deploy
+bun seed && bun prisma/seed-authored.ts
+bun dev
+```
+
+App runs at `http://localhost:3000`. See [Setup](#setup) below for why `DATABASE_URL` needs to be in two files.
+
 ## Features
 
 - **Multi-language judge** — write and run solutions in TypeScript, Python, or Java against real test cases, no sandboxing shortcuts.
