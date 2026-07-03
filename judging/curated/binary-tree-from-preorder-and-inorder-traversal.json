@@ -1,0 +1,84 @@
+{
+  "id": "binary-tree-from-preorder-and-inorder-traversal",
+  "kind": "function",
+  "entry": "buildTree",
+  "names": {
+    "python": "build_tree"
+  },
+  "argTypes": [
+    "any",
+    "any"
+  ],
+  "returnType": "TreeNode",
+  "comparator": "exact",
+  "cases": [
+    {
+      "name": "Example 1",
+      "args": [
+        [
+          1,
+          2,
+          3,
+          4
+        ],
+        [
+          2,
+          1,
+          3,
+          4
+        ]
+      ],
+      "expected": [
+        1,
+        2,
+        3,
+        null,
+        null,
+        null,
+        4
+      ]
+    },
+    {
+      "name": "Example 2",
+      "args": [
+        [
+          1
+        ],
+        [
+          1
+        ]
+      ],
+      "expected": [
+        1
+      ]
+    },
+    {
+      "name": "Larger Tree",
+      "args": [
+        [
+          3,
+          9,
+          20,
+          15,
+          7
+        ],
+        [
+          9,
+          3,
+          15,
+          20,
+          7
+        ]
+      ],
+      "expected": [
+        3,
+        9,
+        20,
+        null,
+        null,
+        15,
+        7
+      ]
+    }
+  ]
+}

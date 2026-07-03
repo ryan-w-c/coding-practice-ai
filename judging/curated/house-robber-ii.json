@@ -1,0 +1,90 @@
+{
+  "id": "house-robber-ii",
+  "kind": "function",
+  "entry": "rob",
+  "names": {
+    "python": "rob"
+  },
+  "argTypes": [
+    "int[]"
+  ],
+  "returnType": "int",
+  "comparator": "exact",
+  "cases": [
+    {
+      "name": "three houses circular",
+      "args": [
+        [
+          2,
+          3,
+          2
+        ]
+      ],
+      "expected": 3
+    },
+    {
+      "name": "classic 1,2,3,1",
+      "args": [
+        [
+          1,
+          2,
+          3,
+          1
+        ]
+      ],
+      "expected": 4
+    },
+    {
+      "name": "take the middle",
+      "args": [
+        [
+          1,
+          2,
+          3
+        ]
+      ],
+      "expected": 3
+    },
+    {
+      "name": "single house",
+      "args": [
+        [
+          1
+        ]
+      ],
+      "expected": 1
+    },
+    {
+      "name": "skip wrap-around",
+      "args": [
+        [
+          200,
+          3,
+          140,
+          20,
+          10
+        ]
+      ],
+      "expected": 340
+    },
+    {
+      "name": "two houses",
+      "args": [
+        [
+          1,
+          1
+        ]
+      ],
+      "expected": 1
+    },
+    {
+      "name": "zero value",
+      "args": [
+        [
+          0
+        ]
+      ],
+      "expected": 0
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "id": "balanced-binary-tree",
+  "kind": "function",
+  "entry": "isBalanced",
+  "names": {
+    "python": "is_balanced"
+  },
+  "argTypes": [
+    "TreeNode"
+  ],
+  "returnType": "any",
+  "comparator": "exact",
+  "cases": [
+    {
+      "name": "should return true for Example 1",
+      "args": [
+        [
+          1,
+          2,
+          3,
+          null,
+          null,
+          4,
+          0
+        ]
+      ],
+      "expected": true
+    },
+    {
+      "name": "should return false for Example 2",
+      "args": [
+        [
+          1,
+          2,
+          3,
+          null,
+          null,
+          4,
+          null,
+          5,
+          0
+        ]
+      ],
+      "expected": false
+    },
+    {
+      "name": "should return true for an empty tree",
+      "args": [
+        null
+      ],
+      "expected": true
+    },
+    {
+      "name": "should return true for a single-node tree",
+      "args": [
+        [
+          1
+        ]
+      ],
+      "expected": true
+    },
+    {
+      "name": "should return true for a balanced tree",
+      "args": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      ],
+      "expected": true
+    },
+    {
+      "name": "should return false for an unbalanced tree with deeper left side",
+      "args": [
+        [
+          1,
+          2,
+          null,
+          3,
+          null,
+          4,
+          null,
+          5,
+          0
+        ]
+      ],
+      "expected": false
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+class Solution {
+    public void solve(char[][] board) {
+        int m = board.length, n = board[0].length;
+        for (int r = 0; r < m; r++) {
+            mark(board, r, 0);
+            mark(board, r, n - 1);
+        }
+        for (int c = 0; c < n; c++) {
+            mark(board, 0, c);
+            mark(board, m - 1, c);
+        }
+        for (int r = 0; r < m; r++)
+            for (int c = 0; c < n; c++)
+                board[r][c] = board[r][c] == 'S' ? 'O' : 'X';
+    }
+
+    private void mark(char[][] board, int r, int c) {
+        if (r < 0 || r >= board.length || c < 0 || c >= board[0].length || board[r][c] != 'O') return;
+        board[r][c] = 'S';
+        mark(board, r + 1, c);
+        mark(board, r - 1, c);
+        mark(board, r, c + 1);
+        mark(board, r, c - 1);
+    }
+}

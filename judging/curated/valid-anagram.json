@@ -1,0 +1,80 @@
+{
+  "id": "valid-anagram",
+  "kind": "function",
+  "entry": "isAnagram",
+  "names": {
+    "python": "is_anagram"
+  },
+  "argTypes": [
+    "any",
+    "any"
+  ],
+  "returnType": "any",
+  "comparator": "exact",
+  "cases": [
+    {
+      "name": "should return true when the two strings are anagrams",
+      "args": [
+        "racecar",
+        "carrace"
+      ],
+      "expected": true
+    },
+    {
+      "name": "should return false when the two strings are not anagrams",
+      "args": [
+        "jar",
+        "jam"
+      ],
+      "expected": false
+    },
+    {
+      "name": "should return false when the two strings have different lengths",
+      "args": [
+        "listen",
+        "silentt"
+      ],
+      "expected": false
+    },
+    {
+      "name": "should return true for anagrams with repeated characters",
+      "args": [
+        "aabbcc",
+        "baccab"
+      ],
+      "expected": true
+    },
+    {
+      "name": "should return false when the two strings are not the same length",
+      "args": [
+        "",
+        "a"
+      ],
+      "expected": false
+    },
+    {
+      "name": "should return true when both strings are empty",
+      "args": [
+        "",
+        ""
+      ],
+      "expected": true
+    },
+    {
+      "name": "should return true for single character strings that are the same",
+      "args": [
+        "a",
+        "a"
+      ],
+      "expected": true
+    },
+    {
+      "name": "should return false for single character strings that are different",
+      "args": [
+        "a",
+        "b"
+      ],
+      "expected": false
+    }
+  ]
+}

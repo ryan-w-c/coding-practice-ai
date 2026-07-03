@@ -1,0 +1,64 @@
+{
+  "id": "longest-repeating-substring-with-replacement",
+  "kind": "function",
+  "entry": "characterReplacement",
+  "names": {
+    "python": "character_replacement"
+  },
+  "argTypes": [
+    "any",
+    "any"
+  ],
+  "returnType": "any",
+  "comparator": "exact",
+  "cases": [
+    {
+      "name": "should return 4 for s = 'XYYX' and k = 2",
+      "args": [
+        "XYYX",
+        2
+      ],
+      "expected": 4
+    },
+    {
+      "name": "should return 5 for s = 'AAABABB' and k = 1",
+      "args": [
+        "AAABABB",
+        1
+      ],
+      "expected": 5
+    },
+    {
+      "name": "should return 6 for s = 'AAABABB' and k = 2",
+      "args": [
+        "AAABABB",
+        2
+      ],
+      "expected": 6
+    },
+    {
+      "name": "should return the entire length for identical characters",
+      "args": [
+        "AAAAA",
+        2
+      ],
+      "expected": 5
+    },
+    {
+      "name": "should return the correct length when no replacements are allowed",
+      "args": [
+        "AABBBACC",
+        0
+      ],
+      "expected": 3
+    },
+    {
+      "name": "should handle the case where all characters need to be replaced",
+      "args": [
+        "ABCDE",
+        4
+      ],
+      "expected": 5
+    }
+  ]
+}

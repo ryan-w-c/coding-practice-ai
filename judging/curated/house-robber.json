@@ -1,0 +1,81 @@
+{
+  "id": "house-robber",
+  "kind": "function",
+  "entry": "rob",
+  "names": {
+    "python": "rob"
+  },
+  "argTypes": [
+    "int[]"
+  ],
+  "returnType": "int",
+  "comparator": "exact",
+  "cases": [
+    {
+      "name": "classic 1,2,3,1",
+      "args": [
+        [
+          1,
+          2,
+          3,
+          1
+        ]
+      ],
+      "expected": 4
+    },
+    {
+      "name": "classic 2,7,9,3,1",
+      "args": [
+        [
+          2,
+          7,
+          9,
+          3,
+          1
+        ]
+      ],
+      "expected": 12
+    },
+    {
+      "name": "single house",
+      "args": [
+        [
+          5
+        ]
+      ],
+      "expected": 5
+    },
+    {
+      "name": "two houses",
+      "args": [
+        [
+          2,
+          1
+        ]
+      ],
+      "expected": 2
+    },
+    {
+      "name": "all zero",
+      "args": [
+        [
+          0,
+          0
+        ]
+      ],
+      "expected": 0
+    },
+    {
+      "name": "alternating big",
+      "args": [
+        [
+          100,
+          1,
+          1,
+          100
+        ]
+      ],
+      "expected": 200
+    }
+  ]
+}

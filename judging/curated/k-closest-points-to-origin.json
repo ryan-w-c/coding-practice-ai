@@ -1,0 +1,162 @@
+{
+  "id": "k-closest-points-to-origin",
+  "kind": "function",
+  "entry": "kClosest",
+  "names": {
+    "python": "k_closest"
+  },
+  "argTypes": [
+    "any",
+    "any"
+  ],
+  "returnType": "any",
+  "comparator": "unordered",
+  "cases": [
+    {
+      "name": "should return [[0,2]] for input points [[0,2],[2,2]] and k = 1",
+      "args": [
+        [
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        1
+      ],
+      "expected": [
+        [
+          0,
+          2
+        ]
+      ]
+    },
+    {
+      "name": "should return [[0,2],[2,0]] for input points [[0,2],[2,0],[2,2]] and k = 2",
+      "args": [
+        [
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        2
+      ],
+      "expected": [
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          0
+        ]
+      ]
+    },
+    {
+      "name": "should return [[0,1]] for input points [[0,1],[1,1],[2,2]] and k = 1",
+      "args": [
+        [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        1
+      ],
+      "expected": [
+        [
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "name": "should return all points if k equals the length of points",
+      "args": [
+        [
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        3
+      ],
+      "expected": [
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "name": "should return the correct k closest points for negative coordinates",
+      "args": [
+        [
+          [
+            -2,
+            -4
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            -1,
+            -1
+          ],
+          [
+            3,
+            3
+          ]
+        ],
+        2
+      ],
+      "expected": [
+        [
+          -1,
+          -1
+        ],
+        [
+          0,
+          1
+        ]
+      ]
+    }
+  ]
+}

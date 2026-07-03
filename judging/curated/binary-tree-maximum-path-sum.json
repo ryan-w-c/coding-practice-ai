@@ -1,0 +1,64 @@
+{
+  "id": "binary-tree-maximum-path-sum",
+  "kind": "function",
+  "entry": "maxPathSum",
+  "names": {
+    "python": "max_path_sum"
+  },
+  "argTypes": [
+    "TreeNode"
+  ],
+  "returnType": "any",
+  "comparator": "exact",
+  "cases": [
+    {
+      "name": "Example 1",
+      "args": [
+        [
+          1,
+          2,
+          3
+        ]
+      ],
+      "expected": 6
+    },
+    {
+      "name": "Example 2",
+      "args": [
+        [
+          -15,
+          10,
+          20,
+          null,
+          null,
+          15,
+          5,
+          -5
+        ]
+      ],
+      "expected": 40
+    },
+    {
+      "name": "Tree with only negative values",
+      "args": [
+        [
+          -10,
+          -20,
+          -30
+        ]
+      ],
+      "expected": -10
+    },
+    {
+      "name": "Tree with mixed positive and negative values",
+      "args": [
+        [
+          2,
+          -1,
+          3
+        ]
+      ],
+      "expected": 5
+    }
+  ]
+}

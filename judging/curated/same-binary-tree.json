@@ -1,0 +1,81 @@
+{
+  "id": "same-binary-tree",
+  "kind": "function",
+  "entry": "isSameTree",
+  "names": {
+    "python": "is_same_tree"
+  },
+  "argTypes": [
+    "TreeNode",
+    "TreeNode"
+  ],
+  "returnType": "any",
+  "comparator": "exact",
+  "cases": [
+    {
+      "name": "should return true for Example 1",
+      "args": [
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          1,
+          2,
+          3
+        ]
+      ],
+      "expected": true
+    },
+    {
+      "name": "should return false for Example 2",
+      "args": [
+        [
+          4,
+          7
+        ],
+        [
+          4,
+          null,
+          7
+        ]
+      ],
+      "expected": false
+    },
+    {
+      "name": "should return false for Example 3",
+      "args": [
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          1,
+          3,
+          2
+        ]
+      ],
+      "expected": false
+    },
+    {
+      "name": "should return true for two empty trees",
+      "args": [
+        null,
+        null
+      ],
+      "expected": true
+    },
+    {
+      "name": "should return false for one empty tree and one non-empty tree",
+      "args": [
+        [
+          1
+        ],
+        null
+      ],
+      "expected": false
+    }
+  ]
+}

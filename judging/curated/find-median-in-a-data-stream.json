@@ -1,0 +1,177 @@
+{
+  "id": "find-median-in-a-data-stream",
+  "kind": "sequence",
+  "class": "MedianFinder",
+  "names": {
+    "python": "MedianFinder"
+  },
+  "comparator": "exact",
+  "cases": [
+    {
+      "name": "classic 1,2 then 3",
+      "steps": [
+        {
+          "method": "constructor",
+          "args": [],
+          "expected": null
+        },
+        {
+          "method": "addNum",
+          "args": [
+            1
+          ],
+          "expected": null
+        },
+        {
+          "method": "addNum",
+          "args": [
+            2
+          ],
+          "expected": null
+        },
+        {
+          "method": "findMedian",
+          "args": [],
+          "expected": 1.5
+        },
+        {
+          "method": "addNum",
+          "args": [
+            3
+          ],
+          "expected": null
+        },
+        {
+          "method": "findMedian",
+          "args": [],
+          "expected": 2
+        }
+      ]
+    },
+    {
+      "name": "descending negatives",
+      "steps": [
+        {
+          "method": "constructor",
+          "args": [],
+          "expected": null
+        },
+        {
+          "method": "addNum",
+          "args": [
+            -1
+          ],
+          "expected": null
+        },
+        {
+          "method": "findMedian",
+          "args": [],
+          "expected": -1
+        },
+        {
+          "method": "addNum",
+          "args": [
+            -2
+          ],
+          "expected": null
+        },
+        {
+          "method": "findMedian",
+          "args": [],
+          "expected": -1.5
+        },
+        {
+          "method": "addNum",
+          "args": [
+            -3
+          ],
+          "expected": null
+        },
+        {
+          "method": "findMedian",
+          "args": [],
+          "expected": -2
+        },
+        {
+          "method": "addNum",
+          "args": [
+            -4
+          ],
+          "expected": null
+        },
+        {
+          "method": "findMedian",
+          "args": [],
+          "expected": -2.5
+        },
+        {
+          "method": "addNum",
+          "args": [
+            -5
+          ],
+          "expected": null
+        },
+        {
+          "method": "findMedian",
+          "args": [],
+          "expected": -3
+        }
+      ]
+    },
+    {
+      "name": "duplicates",
+      "steps": [
+        {
+          "method": "constructor",
+          "args": [],
+          "expected": null
+        },
+        {
+          "method": "addNum",
+          "args": [
+            5
+          ],
+          "expected": null
+        },
+        {
+          "method": "addNum",
+          "args": [
+            5
+          ],
+          "expected": null
+        },
+        {
+          "method": "addNum",
+          "args": [
+            5
+          ],
+          "expected": null
+        },
+        {
+          "method": "findMedian",
+          "args": [],
+          "expected": 5
+        },
+        {
+          "method": "addNum",
+          "args": [
+            6
+          ],
+          "expected": null
+        },
+        {
+          "method": "addNum",
+          "args": [
+            6
+          ],
+          "expected": null
+        },
+        {
+          "method": "findMedian",
+          "args": [],
+          "expected": 5
+        }
+      ]
+    }
+  ]
+}

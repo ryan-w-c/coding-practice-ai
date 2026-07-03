@@ -1,0 +1,127 @@
+{
+  "id": "redundant-connection",
+  "kind": "function",
+  "entry": "findRedundantConnection",
+  "names": {
+    "python": "find_redundant_connection"
+  },
+  "argTypes": [
+    "any"
+  ],
+  "returnType": "any",
+  "comparator": "exact",
+  "cases": [
+    {
+      "name": "Example 1",
+      "args": [
+        [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            2,
+            4
+          ]
+        ]
+      ],
+      "expected": [
+        2,
+        4
+      ]
+    },
+    {
+      "name": "Example 2",
+      "args": [
+        [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            5
+          ]
+        ]
+      ],
+      "expected": [
+        3,
+        4
+      ]
+    },
+    {
+      "name": "Edge at the end forms the cycle",
+      "args": [
+        [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            4,
+            5
+          ]
+        ]
+      ],
+      "expected": [
+        1,
+        4
+      ]
+    },
+    {
+      "name": "Simple cycle",
+      "args": [
+        [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            1
+          ]
+        ]
+      ],
+      "expected": [
+        3,
+        1
+      ]
+    }
+  ]
+}

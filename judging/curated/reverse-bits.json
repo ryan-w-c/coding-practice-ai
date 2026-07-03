@@ -1,0 +1,57 @@
+{
+  "id": "reverse-bits",
+  "kind": "function",
+  "entry": "reverseBits",
+  "names": {
+    "python": "reverse_bits"
+  },
+  "argTypes": [
+    "int"
+  ],
+  "returnType": "int",
+  "comparator": "exact",
+  "cases": [
+    {
+      "name": "two becomes 2^30",
+      "args": [
+        2
+      ],
+      "expected": 1073741824
+    },
+    {
+      "name": "classic example",
+      "args": [
+        43261596
+      ],
+      "expected": 964176192
+    },
+    {
+      "name": "zero",
+      "args": [
+        0
+      ],
+      "expected": 0
+    },
+    {
+      "name": "all high bits set",
+      "args": [
+        4294967292
+      ],
+      "expected": 1073741823
+    },
+    {
+      "name": "four becomes 2^29",
+      "args": [
+        4
+      ],
+      "expected": 536870912
+    },
+    {
+      "name": "top bit becomes one",
+      "args": [
+        2147483648
+      ],
+      "expected": 1
+    }
+  ]
+}

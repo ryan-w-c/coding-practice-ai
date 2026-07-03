@@ -1,0 +1,57 @@
+{
+  "id": "is-palindrome",
+  "kind": "function",
+  "entry": "isPalindrome",
+  "names": {
+    "python": "is_palindrome"
+  },
+  "argTypes": [
+    "any"
+  ],
+  "returnType": "any",
+  "comparator": "exact",
+  "cases": [
+    {
+      "name": "should return true for a palindrome with mixed case and punctuation",
+      "args": [
+        "Was it a car or a cat I saw?"
+      ],
+      "expected": true
+    },
+    {
+      "name": "should return false for a non-palindrome string",
+      "args": [
+        "tab a cat"
+      ],
+      "expected": false
+    },
+    {
+      "name": "should return true for a simple palindrome",
+      "args": [
+        "A man, a plan, a canal, Panama"
+      ],
+      "expected": true
+    },
+    {
+      "name": "should return true for an empty string",
+      "args": [
+        ""
+      ],
+      "expected": true
+    },
+    {
+      "name": "should return true for a single character",
+      "args": [
+        "a"
+      ],
+      "expected": true
+    },
+    {
+      "name": "should return false for a string with spaces that is not a palindrome",
+      "args": [
+        "Hello world"
+      ],
+      "expected": false
+    }
+  ]
+}

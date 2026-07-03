@@ -1,0 +1,100 @@
+{
+  "id": "combination-target-sum",
+  "kind": "function",
+  "entry": "combinationSum",
+  "names": {
+    "python": "combination_sum"
+  },
+  "argTypes": [
+    "int[]",
+    "int"
+  ],
+  "returnType": "int[][]",
+  "comparator": "unordered-nested",
+  "cases": [
+    {
+      "name": "example 1",
+      "args": [
+        [
+          2,
+          5,
+          6,
+          9
+        ],
+        9
+      ],
+      "expected": [
+        [
+          2,
+          2,
+          5
+        ],
+        [
+          9
+        ]
+      ]
+    },
+    {
+      "name": "example 2",
+      "args": [
+        [
+          3,
+          4,
+          5
+        ],
+        16
+      ],
+      "expected": [
+        [
+          3,
+          3,
+          3,
+          3,
+          4
+        ],
+        [
+          3,
+          3,
+          5,
+          5
+        ],
+        [
+          4,
+          4,
+          4,
+          4
+        ],
+        [
+          3,
+          4,
+          4,
+          5
+        ]
+      ]
+    },
+    {
+      "name": "no solutions",
+      "args": [
+        [
+          3
+        ],
+        5
+      ],
+      "expected": []
+    },
+    {
+      "name": "single element equals target",
+      "args": [
+        [
+          7
+        ],
+        7
+      ],
+      "expected": [
+        [
+          7
+        ]
+      ]
+    }
+  ]
+}

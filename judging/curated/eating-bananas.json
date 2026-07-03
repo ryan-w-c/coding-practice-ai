@@ -1,0 +1,72 @@
+{
+  "id": "eating-bananas",
+  "kind": "function",
+  "entry": "minEatingSpeed",
+  "names": {
+    "python": "min_eating_speed"
+  },
+  "argTypes": [
+    "any",
+    "any"
+  ],
+  "returnType": "any",
+  "comparator": "exact",
+  "cases": [
+    {
+      "name": "should return the minimum eating speed for the first test case",
+      "args": [
+        [
+          1,
+          4,
+          3,
+          2
+        ],
+        9
+      ],
+      "expected": 2
+    },
+    {
+      "name": "should return the minimum eating speed for the second test case",
+      "args": [
+        [
+          25,
+          10,
+          23,
+          4
+        ],
+        4
+      ],
+      "expected": 25
+    },
+    {
+      "name": "should return 1 when there is only one hour and one pile",
+      "args": [
+        [
+          100
+        ],
+        1
+      ],
+      "expected": 100
+    },
+    {
+      "name": "should handle edge case of single pile",
+      "args": [
+        [
+          5
+        ],
+        10
+      ],
+      "expected": 1
+    },
+    {
+      "name": "should handle maximum number of bananas per pile",
+      "args": [
+        [
+          1000000000
+        ],
+        1000000
+      ],
+      "expected": 1000
+    }
+  ]
+}

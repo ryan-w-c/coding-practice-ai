@@ -1,0 +1,72 @@
+{
+  "id": "permutation-string",
+  "kind": "function",
+  "entry": "checkInclusion",
+  "names": {
+    "python": "check_inclusion"
+  },
+  "argTypes": [
+    "any",
+    "any"
+  ],
+  "returnType": "any",
+  "comparator": "exact",
+  "cases": [
+    {
+      "name": "should return true for s1 = 'abc' and s2 = 'lecabee'",
+      "args": [
+        "abc",
+        "lecabee"
+      ],
+      "expected": true
+    },
+    {
+      "name": "should return false for s1 = 'abc' and s2 = 'lecaabee'",
+      "args": [
+        "abc",
+        "lecaabee"
+      ],
+      "expected": false
+    },
+    {
+      "name": "should return true for s1 = 'a' and s2 = 'a'",
+      "args": [
+        "a",
+        "a"
+      ],
+      "expected": true
+    },
+    {
+      "name": "should return false for s1 = 'abcd' and s2 = 'abc'",
+      "args": [
+        "abcd",
+        "abc"
+      ],
+      "expected": false
+    },
+    {
+      "name": "should return true for s1 = 'adc' and s2 = 'dcda'",
+      "args": [
+        "adc",
+        "dcda"
+      ],
+      "expected": true
+    },
+    {
+      "name": "should return false for s1 = 'hello' and s2 = 'ooolleoooleh'",
+      "args": [
+        "hello",
+        "ooolleoooleh"
+      ],
+      "expected": false
+    },
+    {
+      "name": "should return true for s1 = 'bao' and s2 = 'eidbaooo'",
+      "args": [
+        "bao",
+        "eidbaooo"
+      ],
+      "expected": true
+    }
+  ]
+}

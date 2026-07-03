@@ -1,0 +1,131 @@
+{
+  "id": "meeting-schedule-ii",
+  "kind": "function",
+  "entry": "minMeetingDays",
+  "names": {
+    "python": "min_meeting_days"
+  },
+  "argTypes": [
+    "any"
+  ],
+  "returnType": "any",
+  "comparator": "exact",
+  "cases": [
+    {
+      "name": "should return 2 for intervals [(0,40),(5,10),(15,20)]",
+      "args": [
+        [
+          [
+            0,
+            40
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            15,
+            20
+          ]
+        ]
+      ],
+      "expected": 2
+    },
+    {
+      "name": "should return 1 for intervals [(4,9)]",
+      "args": [
+        [
+          [
+            4,
+            9
+          ]
+        ]
+      ],
+      "expected": 1
+    },
+    {
+      "name": "should return 1 for non-overlapping intervals [(0,5),(5,10),(10,15)]",
+      "args": [
+        [
+          [
+            0,
+            5
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            10,
+            15
+          ]
+        ]
+      ],
+      "expected": 1
+    },
+    {
+      "name": "should return 3 for overlapping intervals [(1,10), (2,6), (5,8), (15,20)]",
+      "args": [
+        [
+          [
+            1,
+            10
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            15,
+            20
+          ]
+        ]
+      ],
+      "expected": 3
+    },
+    {
+      "name": "should return 1 for intervals with exact touching points [(1,5), (5,10), (10,20)]",
+      "args": [
+        [
+          [
+            1,
+            5
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            10,
+            20
+          ]
+        ]
+      ],
+      "expected": 1
+    },
+    {
+      "name": "should return 2 for intervals [(0, 30), (15, 25), (35, 50)]",
+      "args": [
+        [
+          [
+            0,
+            30
+          ],
+          [
+            15,
+            25
+          ],
+          [
+            35,
+            50
+          ]
+        ]
+      ],
+      "expected": 2
+    }
+  ]
+}

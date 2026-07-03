@@ -1,0 +1,140 @@
+{
+  "id": "reconstruct-itinerary",
+  "kind": "function",
+  "entry": "findItinerary",
+  "names": {
+    "python": "find_itinerary"
+  },
+  "argTypes": [
+    "string[][]"
+  ],
+  "returnType": "string[]",
+  "comparator": "exact",
+  "cases": [
+    {
+      "name": "linear route",
+      "args": [
+        [
+          [
+            "MUC",
+            "LHR"
+          ],
+          [
+            "JFK",
+            "MUC"
+          ],
+          [
+            "SFO",
+            "SJC"
+          ],
+          [
+            "LHR",
+            "SFO"
+          ]
+        ]
+      ],
+      "expected": [
+        "JFK",
+        "MUC",
+        "LHR",
+        "SFO",
+        "SJC"
+      ]
+    },
+    {
+      "name": "lexical choice with backtrack",
+      "args": [
+        [
+          [
+            "JFK",
+            "SFO"
+          ],
+          [
+            "JFK",
+            "ATL"
+          ],
+          [
+            "SFO",
+            "ATL"
+          ],
+          [
+            "ATL",
+            "JFK"
+          ],
+          [
+            "ATL",
+            "SFO"
+          ]
+        ]
+      ],
+      "expected": [
+        "JFK",
+        "ATL",
+        "JFK",
+        "SFO",
+        "ATL",
+        "SFO"
+      ]
+    },
+    {
+      "name": "single ticket",
+      "args": [
+        [
+          [
+            "JFK",
+            "AAA"
+          ]
+        ]
+      ],
+      "expected": [
+        "JFK",
+        "AAA"
+      ]
+    },
+    {
+      "name": "round trip",
+      "args": [
+        [
+          [
+            "JFK",
+            "AAA"
+          ],
+          [
+            "AAA",
+            "JFK"
+          ]
+        ]
+      ],
+      "expected": [
+        "JFK",
+        "AAA",
+        "JFK"
+      ]
+    },
+    {
+      "name": "dead end must come last",
+      "args": [
+        [
+          [
+            "JFK",
+            "KUL"
+          ],
+          [
+            "JFK",
+            "NRT"
+          ],
+          [
+            "NRT",
+            "JFK"
+          ]
+        ]
+      ],
+      "expected": [
+        "JFK",
+        "NRT",
+        "JFK",
+        "KUL"
+      ]
+    }
+  ]
+}

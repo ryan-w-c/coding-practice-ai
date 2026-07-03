@@ -1,0 +1,72 @@
+{
+  "id": "multiply-strings",
+  "kind": "function",
+  "entry": "multiply",
+  "names": {
+    "python": "multiply"
+  },
+  "argTypes": [
+    "string",
+    "string"
+  ],
+  "returnType": "string",
+  "comparator": "exact",
+  "cases": [
+    {
+      "name": "single digits",
+      "args": [
+        "3",
+        "4"
+      ],
+      "expected": "12"
+    },
+    {
+      "name": "three digits",
+      "args": [
+        "111",
+        "222"
+      ],
+      "expected": "24642"
+    },
+    {
+      "name": "two times three",
+      "args": [
+        "2",
+        "3"
+      ],
+      "expected": "6"
+    },
+    {
+      "name": "classic 123x456",
+      "args": [
+        "123",
+        "456"
+      ],
+      "expected": "56088"
+    },
+    {
+      "name": "zero factor",
+      "args": [
+        "0",
+        "52"
+      ],
+      "expected": "0"
+    },
+    {
+      "name": "carries everywhere",
+      "args": [
+        "999",
+        "999"
+      ],
+      "expected": "998001"
+    },
+    {
+      "name": "beyond 64-bit",
+      "args": [
+        "100000000000",
+        "100000000000"
+      ],
+      "expected": "10000000000000000000000"
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "id": "string-encode-decode",
+  "kind": "roundtrip",
+  "class": "Codec",
+  "names": {
+    "python": "Codec"
+  },
+  "encode": "encode",
+  "decode": "decode",
+  "dataType": "string[]",
+  "comparator": "exact",
+  "cases": [
+    {
+      "name": "basic words",
+      "data": [
+        "neet",
+        "code",
+        "love",
+        "you"
+      ]
+    },
+    {
+      "name": "contains delimiter-ish strings",
+      "data": [
+        "we",
+        "say",
+        ":",
+        "yes"
+      ]
+    },
+    {
+      "name": "empty list",
+      "data": []
+    },
+    {
+      "name": "single characters",
+      "data": [
+        "a",
+        "b",
+        "c"
+      ]
+    },
+    {
+      "name": "special characters and empty string",
+      "data": [
+        "#",
+        "hello#",
+        "12#34",
+        ""
+      ]
+    },
+    {
+      "name": "numbers-only strings",
+      "data": [
+        "10",
+        "#",
+        "5#xy",
+        "",
+        "0"
+      ]
+    }
+  ]
+}

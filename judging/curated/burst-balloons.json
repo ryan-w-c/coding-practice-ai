@@ -1,0 +1,65 @@
+{
+  "id": "burst-balloons",
+  "kind": "function",
+  "entry": "maxCoins",
+  "names": {
+    "python": "max_coins"
+  },
+  "argTypes": [
+    "int[]"
+  ],
+  "returnType": "int",
+  "comparator": "exact",
+  "cases": [
+    {
+      "name": "classic 3,1,5,8",
+      "args": [
+        [
+          3,
+          1,
+          5,
+          8
+        ]
+      ],
+      "expected": 167
+    },
+    {
+      "name": "two balloons",
+      "args": [
+        [
+          1,
+          5
+        ]
+      ],
+      "expected": 10
+    },
+    {
+      "name": "single balloon",
+      "args": [
+        [
+          7
+        ]
+      ],
+      "expected": 7
+    },
+    {
+      "name": "nine and eight",
+      "args": [
+        [
+          9,
+          8
+        ]
+      ],
+      "expected": 81
+    },
+    {
+      "name": "zero balloon",
+      "args": [
+        [
+          0
+        ]
+      ],
+      "expected": 0
+    }
+  ]
+}

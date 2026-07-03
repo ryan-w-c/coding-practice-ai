@@ -1,0 +1,96 @@
+{
+  "id": "top-k-frequent-elements",
+  "kind": "function",
+  "entry": "topKFrequent",
+  "names": {
+    "python": "top_k_frequent"
+  },
+  "argTypes": [
+    "int[]",
+    "int"
+  ],
+  "returnType": "int[]",
+  "comparator": "unordered",
+  "cases": [
+    {
+      "name": "top 2 of three values",
+      "args": [
+        [
+          1,
+          2,
+          2,
+          3,
+          3,
+          3
+        ],
+        2
+      ],
+      "expected": [
+        2,
+        3
+      ]
+    },
+    {
+      "name": "single value repeated",
+      "args": [
+        [
+          7,
+          7
+        ],
+        1
+      ],
+      "expected": [
+        7
+      ]
+    },
+    {
+      "name": "single element",
+      "args": [
+        [
+          1
+        ],
+        1
+      ],
+      "expected": [
+        1
+      ]
+    },
+    {
+      "name": "k equals distinct count",
+      "args": [
+        [
+          1,
+          1,
+          2,
+          2,
+          3,
+          3
+        ],
+        3
+      ],
+      "expected": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "name": "negatives with distinct frequencies",
+      "args": [
+        [
+          -1,
+          -1,
+          -1,
+          5,
+          5,
+          9
+        ],
+        2
+      ],
+      "expected": [
+        -1,
+        5
+      ]
+    }
+  ]
+}

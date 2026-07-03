@@ -1,0 +1,89 @@
+{
+  "id": "alien-dictionary",
+  "kind": "function",
+  "entry": "alienOrder",
+  "names": {
+    "python": "alien_order"
+  },
+  "argTypes": [
+    "string[]"
+  ],
+  "returnType": "string",
+  "comparator": "exact",
+  "cases": [
+    {
+      "name": "classic wertf",
+      "args": [
+        [
+          "wrt",
+          "wrf",
+          "er",
+          "ett",
+          "rftt"
+        ]
+      ],
+      "expected": "wertf"
+    },
+    {
+      "name": "two letters",
+      "args": [
+        [
+          "z",
+          "x"
+        ]
+      ],
+      "expected": "zx"
+    },
+    {
+      "name": "cycle returns empty",
+      "args": [
+        [
+          "z",
+          "x",
+          "z"
+        ]
+      ],
+      "expected": ""
+    },
+    {
+      "name": "prefix violation",
+      "args": [
+        [
+          "abc",
+          "ab"
+        ]
+      ],
+      "expected": ""
+    },
+    {
+      "name": "single word single letter",
+      "args": [
+        [
+          "z"
+        ]
+      ],
+      "expected": "z"
+    },
+    {
+      "name": "first letters chain",
+      "args": [
+        [
+          "x",
+          "y",
+          "z",
+          "w"
+        ]
+      ],
+      "expected": "xyzw"
+    },
+    {
+      "name": "one word repeated letter",
+      "args": [
+        [
+          "aa"
+        ]
+      ],
+      "expected": "a"
+    }
+  ]
+}

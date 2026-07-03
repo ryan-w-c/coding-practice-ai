@@ -1,0 +1,82 @@
+{
+  "id": "task-scheduling",
+  "kind": "function",
+  "entry": "leastInterval",
+  "names": {
+    "python": "least_interval"
+  },
+  "argTypes": [
+    "any",
+    "any"
+  ],
+  "returnType": "any",
+  "comparator": "exact",
+  "cases": [
+    {
+      "name": "should return 5 for input tasks ['X', 'X', 'Y', 'Y'] with cooldown 2",
+      "args": [
+        [
+          "X",
+          "X",
+          "Y",
+          "Y"
+        ],
+        2
+      ],
+      "expected": 5
+    },
+    {
+      "name": "should return 9 for input tasks ['A', 'A', 'A', 'B', 'C'] with cooldown 3",
+      "args": [
+        [
+          "A",
+          "A",
+          "A",
+          "B",
+          "C"
+        ],
+        3
+      ],
+      "expected": 9
+    },
+    {
+      "name": "should return 6 for input tasks ['A', 'A', 'A', 'B', 'B', 'B'] with cooldown 2",
+      "args": [
+        [
+          "A",
+          "A",
+          "A",
+          "B",
+          "B",
+          "B"
+        ],
+        2
+      ],
+      "expected": 8
+    },
+    {
+      "name": "should return 4 for input tasks ['A', 'B', 'A', 'B'] with cooldown 1",
+      "args": [
+        [
+          "A",
+          "B",
+          "A",
+          "B"
+        ],
+        1
+      ],
+      "expected": 4
+    },
+    {
+      "name": "should return 2 for input tasks ['A', 'B'] with cooldown 0",
+      "args": [
+        [
+          "A",
+          "B"
+        ],
+        0
+      ],
+      "expected": 2
+    }
+  ]
+}

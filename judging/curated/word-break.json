@@ -1,0 +1,85 @@
+{
+  "id": "word-break",
+  "kind": "function",
+  "entry": "wordBreak",
+  "names": {
+    "python": "word_break"
+  },
+  "argTypes": [
+    "string",
+    "string[]"
+  ],
+  "returnType": "bool",
+  "comparator": "exact",
+  "cases": [
+    {
+      "name": "leet + code",
+      "args": [
+        "leetcode",
+        [
+          "leet",
+          "code"
+        ]
+      ],
+      "expected": true
+    },
+    {
+      "name": "word reuse",
+      "args": [
+        "applepenapple",
+        [
+          "apple",
+          "pen"
+        ]
+      ],
+      "expected": true
+    },
+    {
+      "name": "classic false",
+      "args": [
+        "catsandog",
+        [
+          "cats",
+          "dog",
+          "sand",
+          "and",
+          "cat"
+        ]
+      ],
+      "expected": false
+    },
+    {
+      "name": "no match",
+      "args": [
+        "a",
+        [
+          "b"
+        ]
+      ],
+      "expected": false
+    },
+    {
+      "name": "combination lengths",
+      "args": [
+        "aaaaaaa",
+        [
+          "aaaa",
+          "aaa"
+        ]
+      ],
+      "expected": true
+    },
+    {
+      "name": "overlapping options",
+      "args": [
+        "cars",
+        [
+          "car",
+          "ca",
+          "rs"
+        ]
+      ],
+      "expected": true
+    }
+  ]
+}

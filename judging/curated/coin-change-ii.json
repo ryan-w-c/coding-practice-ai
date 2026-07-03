@@ -1,0 +1,73 @@
+{
+  "id": "coin-change-ii",
+  "kind": "function",
+  "entry": "coinChangeII",
+  "names": {
+    "python": "coin_change_i_i"
+  },
+  "argTypes": [
+    "any",
+    "any"
+  ],
+  "returnType": "any",
+  "comparator": "exact",
+  "cases": [
+    {
+      "name": "should return 4 for amount = 4 and coins = [1, 2, 3]",
+      "args": [
+        4,
+        [
+          1,
+          2,
+          3
+        ]
+      ],
+      "expected": 4
+    },
+    {
+      "name": "should return 0 for amount = 7 and coins = [2, 4]",
+      "args": [
+        7,
+        [
+          2,
+          4
+        ]
+      ],
+      "expected": 0
+    },
+    {
+      "name": "should return 1 for amount = 0 and coins = [1, 2, 3]",
+      "args": [
+        0,
+        [
+          1,
+          2,
+          3
+        ]
+      ],
+      "expected": 1
+    },
+    {
+      "name": "should return 1 for amount = 3 and coins = [3]",
+      "args": [
+        3,
+        [
+          3
+        ]
+      ],
+      "expected": 1
+    },
+    {
+      "name": "should return 3 for amount = 5 and coins = [1, 2, 5]",
+      "args": [
+        5,
+        [
+          1,
+          2,
+          5
+        ]
+      ],
+      "expected": 4
+    }
+  ]
+}

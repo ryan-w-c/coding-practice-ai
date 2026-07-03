@@ -1,0 +1,92 @@
+{
+  "id": "partition-equal-subset-sum",
+  "kind": "function",
+  "entry": "canPartition",
+  "names": {
+    "python": "can_partition"
+  },
+  "argTypes": [
+    "int[]"
+  ],
+  "returnType": "bool",
+  "comparator": "exact",
+  "cases": [
+    {
+      "name": "classic true",
+      "args": [
+        [
+          1,
+          5,
+          11,
+          5
+        ]
+      ],
+      "expected": true
+    },
+    {
+      "name": "classic false",
+      "args": [
+        [
+          1,
+          2,
+          3,
+          5
+        ]
+      ],
+      "expected": false
+    },
+    {
+      "name": "single element",
+      "args": [
+        [
+          1
+        ]
+      ],
+      "expected": false
+    },
+    {
+      "name": "equal pair",
+      "args": [
+        [
+          2,
+          2
+        ]
+      ],
+      "expected": true
+    },
+    {
+      "name": "four ones",
+      "args": [
+        [
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "expected": true
+    },
+    {
+      "name": "one big element",
+      "args": [
+        [
+          100
+        ]
+      ],
+      "expected": false
+    },
+    {
+      "name": "odd-count values",
+      "args": [
+        [
+          3,
+          3,
+          3,
+          4,
+          5
+        ]
+      ],
+      "expected": true
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "id": "missing-number",
+  "kind": "function",
+  "entry": "missingNumber",
+  "names": {
+    "python": "missing_number"
+  },
+  "argTypes": [
+    "int[]"
+  ],
+  "returnType": "int",
+  "comparator": "exact",
+  "cases": [
+    {
+      "name": "missing middle",
+      "args": [
+        [
+          3,
+          0,
+          1
+        ]
+      ],
+      "expected": 2
+    },
+    {
+      "name": "missing end",
+      "args": [
+        [
+          0,
+          1
+        ]
+      ],
+      "expected": 2
+    },
+    {
+      "name": "longer range",
+      "args": [
+        [
+          9,
+          6,
+          4,
+          2,
+          3,
+          5,
+          7,
+          0,
+          1
+        ]
+      ],
+      "expected": 8
+    },
+    {
+      "name": "single zero",
+      "args": [
+        [
+          0
+        ]
+      ],
+      "expected": 1
+    },
+    {
+      "name": "missing zero",
+      "args": [
+        [
+          1
+        ]
+      ],
+      "expected": 0
+    },
+    {
+      "name": "missing zero longer",
+      "args": [
+        [
+          1,
+          2
+        ]
+      ],
+      "expected": 0
+    }
+  ]
+}

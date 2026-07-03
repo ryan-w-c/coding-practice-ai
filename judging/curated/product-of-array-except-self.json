@@ -1,0 +1,109 @@
+{
+  "id": "product-of-array-except-self",
+  "kind": "function",
+  "entry": "productExceptSelf",
+  "names": {
+    "python": "product_except_self"
+  },
+  "argTypes": [
+    "int[]"
+  ],
+  "returnType": "int[]",
+  "comparator": "float",
+  "cases": [
+    {
+      "name": "basic",
+      "args": [
+        [
+          1,
+          2,
+          4,
+          6
+        ]
+      ],
+      "expected": [
+        48,
+        24,
+        12,
+        8
+      ]
+    },
+    {
+      "name": "contains zero",
+      "args": [
+        [
+          -1,
+          0,
+          1,
+          2,
+          3
+        ]
+      ],
+      "expected": [
+        0,
+        -6,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "length two",
+      "args": [
+        [
+          3,
+          5
+        ]
+      ],
+      "expected": [
+        5,
+        3
+      ]
+    },
+    {
+      "name": "all negative",
+      "args": [
+        [
+          -1,
+          -2,
+          -3
+        ]
+      ],
+      "expected": [
+        6,
+        3,
+        2
+      ]
+    },
+    {
+      "name": "all ones",
+      "args": [
+        [
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "expected": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "two zeros",
+      "args": [
+        [
+          0,
+          0
+        ]
+      ],
+      "expected": [
+        0,
+        0
+      ]
+    }
+  ]
+}

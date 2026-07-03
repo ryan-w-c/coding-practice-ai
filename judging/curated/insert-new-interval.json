@@ -1,0 +1,205 @@
+{
+  "id": "insert-new-interval",
+  "kind": "function",
+  "entry": "insertInterval",
+  "names": {
+    "python": "insert_interval"
+  },
+  "argTypes": [
+    "any",
+    "any"
+  ],
+  "returnType": "any",
+  "comparator": "exact",
+  "cases": [
+    {
+      "name": "should merge overlapping intervals correctly",
+      "args": [
+        [
+          [
+            1,
+            3
+          ],
+          [
+            4,
+            6
+          ]
+        ],
+        [
+          2,
+          5
+        ]
+      ],
+      "expected": [
+        [
+          1,
+          6
+        ]
+      ]
+    },
+    {
+      "name": "should add new interval without merging",
+      "args": [
+        [
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            9,
+            10
+          ]
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "expected": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          9,
+          10
+        ]
+      ]
+    },
+    {
+      "name": "should add new interval at the beginning",
+      "args": [
+        [
+          [
+            5,
+            7
+          ],
+          [
+            9,
+            11
+          ]
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "expected": [
+        [
+          1,
+          4
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          9,
+          11
+        ]
+      ]
+    },
+    {
+      "name": "should add new interval at the end",
+      "args": [
+        [
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            5
+          ]
+        ],
+        [
+          6,
+          8
+        ]
+      ],
+      "expected": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          6,
+          8
+        ]
+      ]
+    },
+    {
+      "name": "should merge all intervals into one",
+      "args": [
+        [
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            12,
+            16
+          ]
+        ],
+        [
+          4,
+          13
+        ]
+      ],
+      "expected": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          16
+        ]
+      ]
+    },
+    {
+      "name": "should handle an empty intervals array",
+      "args": [
+        [],
+        [
+          5,
+          7
+        ]
+      ],
+      "expected": [
+        [
+          5,
+          7
+        ]
+      ]
+    }
+  ]
+}

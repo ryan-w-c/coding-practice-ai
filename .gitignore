@@ -1,0 +1,14 @@
+node_modules/
+.next/
+out/
+*.log
+.env.local
+.env
+prisma/dev.db
+prisma/dev.db-journal
+.DS_Store
+next-env.d.ts
+
+# judging/problems is a build artifact — rebuilt from judging/curated + judging/generators
+# by prisma/build-cases.ts (runs automatically before dev/start)
+judging/problems/

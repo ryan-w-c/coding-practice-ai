@@ -1,0 +1,56 @@
+{
+  "id": "longest-common-subsequence",
+  "kind": "function",
+  "entry": "longestCommonSubsequence",
+  "names": {
+    "python": "longest_common_subsequence"
+  },
+  "argTypes": [
+    "any",
+    "any"
+  ],
+  "returnType": "any",
+  "comparator": "exact",
+  "cases": [
+    {
+      "name": "should return 3 for text1 = 'cat' and text2 = 'crabt'",
+      "args": [
+        "cat",
+        "crabt"
+      ],
+      "expected": 3
+    },
+    {
+      "name": "should return 4 for text1 = 'abcd' and text2 = 'abcd'",
+      "args": [
+        "abcd",
+        "abcd"
+      ],
+      "expected": 4
+    },
+    {
+      "name": "should return 0 for text1 = 'abcd' and text2 = 'efgh'",
+      "args": [
+        "abcd",
+        "efgh"
+      ],
+      "expected": 0
+    },
+    {
+      "name": "should return 2 for text1 = 'abc' and text2 = 'ac'",
+      "args": [
+        "abc",
+        "ac"
+      ],
+      "expected": 2
+    },
+    {
+      "name": "should return 1 for text1 = 'a' and text2 = 'bca'",
+      "args": [
+        "a",
+        "bca"
+      ],
+      "expected": 1
+    }
+  ]
+}

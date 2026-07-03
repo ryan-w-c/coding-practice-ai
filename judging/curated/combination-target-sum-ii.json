@@ -1,0 +1,125 @@
+{
+  "id": "combination-target-sum-ii",
+  "kind": "function",
+  "entry": "combinationSum2",
+  "names": {
+    "python": "combination_sum2"
+  },
+  "argTypes": [
+    "int[]",
+    "int"
+  ],
+  "returnType": "int[][]",
+  "comparator": "unordered-nested",
+  "cases": [
+    {
+      "name": "duplicates in candidates",
+      "args": [
+        [
+          9,
+          2,
+          2,
+          4,
+          6,
+          1,
+          5
+        ],
+        8
+      ],
+      "expected": [
+        [
+          1,
+          2,
+          5
+        ],
+        [
+          2,
+          2,
+          4
+        ],
+        [
+          2,
+          6
+        ]
+      ]
+    },
+    {
+      "name": "distinct candidates",
+      "args": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        7
+      ],
+      "expected": [
+        [
+          1,
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          4
+        ]
+      ]
+    },
+    {
+      "name": "no combination",
+      "args": [
+        [
+          10,
+          12,
+          15
+        ],
+        5
+      ],
+      "expected": []
+    },
+    {
+      "name": "single combination",
+      "args": [
+        [
+          5
+        ],
+        5
+      ],
+      "expected": [
+        [
+          5
+        ]
+      ]
+    },
+    {
+      "name": "no duplicate outputs",
+      "args": [
+        [
+          1,
+          1,
+          1,
+          2,
+          2
+        ],
+        3
+      ],
+      "expected": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "id": "word-ladder",
+  "kind": "function",
+  "entry": "ladderLength",
+  "names": {
+    "python": "ladder_length"
+  },
+  "argTypes": [
+    "string",
+    "string",
+    "string[]"
+  ],
+  "returnType": "int",
+  "comparator": "exact",
+  "cases": [
+    {
+      "name": "cat -> sag reachable",
+      "args": [
+        "cat",
+        "sag",
+        [
+          "bat",
+          "bag",
+          "sag",
+          "dag",
+          "dot"
+        ]
+      ],
+      "expected": 4
+    },
+    {
+      "name": "cat -> sag unreachable",
+      "args": [
+        "cat",
+        "sag",
+        [
+          "bat",
+          "bag",
+          "sat",
+          "dag",
+          "dot"
+        ]
+      ],
+      "expected": 0
+    },
+    {
+      "name": "single transformation",
+      "args": [
+        "hit",
+        "hot",
+        [
+          "hot"
+        ]
+      ],
+      "expected": 2
+    },
+    {
+      "name": "no possible path",
+      "args": [
+        "hit",
+        "cog",
+        [
+          "hot",
+          "dot",
+          "dog",
+          "lot",
+          "log"
+        ]
+      ],
+      "expected": 0
+    },
+    {
+      "name": "classic hit -> cog",
+      "args": [
+        "hit",
+        "cog",
+        [
+          "hot",
+          "dot",
+          "dog",
+          "lot",
+          "log",
+          "cog"
+        ]
+      ],
+      "expected": 5
+    },
+    {
+      "name": "single letter words",
+      "args": [
+        "a",
+        "c",
+        [
+          "a",
+          "b",
+          "c"
+        ]
+      ],
+      "expected": 2
+    }
+  ]
+}

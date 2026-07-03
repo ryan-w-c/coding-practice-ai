@@ -1,0 +1,147 @@
+{
+  "id": "copy-linked-list-with-random-pointer",
+  "kind": "function",
+  "entry": "copyRandomList",
+  "names": {
+    "python": "copy_random_list"
+  },
+  "argTypes": [
+    "ListNodeRandom"
+  ],
+  "returnType": "ListNodeRandom",
+  "comparator": "exact",
+  "mustCopy": 0,
+  "cases": [
+    {
+      "name": "example 1",
+      "args": [
+        [
+          [
+            3,
+            null
+          ],
+          [
+            7,
+            3
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            5,
+            1
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          3,
+          null
+        ],
+        [
+          7,
+          3
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          5,
+          1
+        ]
+      ]
+    },
+    {
+      "name": "example 2",
+      "args": [
+        [
+          [
+            1,
+            null
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            3,
+            2
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          1,
+          null
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          2
+        ]
+      ]
+    },
+    {
+      "name": "empty list",
+      "args": [
+        []
+      ],
+      "expected": []
+    },
+    {
+      "name": "single self-random",
+      "args": [
+        [
+          [
+            1,
+            0
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "name": "all random to head",
+      "args": [
+        [
+          [
+            5,
+            0
+          ],
+          [
+            6,
+            0
+          ],
+          [
+            7,
+            0
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          5,
+          0
+        ],
+        [
+          6,
+          0
+        ],
+        [
+          7,
+          0
+        ]
+      ]
+    }
+  ]
+}

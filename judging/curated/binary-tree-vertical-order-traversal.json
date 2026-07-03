@@ -1,0 +1,158 @@
+{
+  "id": "binary-tree-vertical-order-traversal",
+  "kind": "function",
+  "entry": "verticalOrder",
+  "names": {
+    "python": "vertical_order"
+  },
+  "argTypes": [
+    "TreeNode"
+  ],
+  "returnType": "int[][]",
+  "comparator": "exact",
+  "cases": [
+    {
+      "name": "simple tree",
+      "args": [
+        [
+          3,
+          9,
+          20,
+          null,
+          null,
+          15,
+          7
+        ]
+      ],
+      "expected": [
+        [
+          9
+        ],
+        [
+          3,
+          15
+        ],
+        [
+          20
+        ],
+        [
+          7
+        ]
+      ]
+    },
+    {
+      "name": "complete tree",
+      "args": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      ],
+      "expected": [
+        [
+          4
+        ],
+        [
+          2
+        ],
+        [
+          1,
+          5,
+          6
+        ],
+        [
+          3
+        ],
+        [
+          7
+        ]
+      ]
+    },
+    {
+      "name": "single node",
+      "args": [
+        [
+          1
+        ]
+      ],
+      "expected": [
+        [
+          1
+        ]
+      ]
+    },
+    {
+      "name": "empty tree",
+      "args": [
+        []
+      ],
+      "expected": []
+    },
+    {
+      "name": "left-skewed chain",
+      "args": [
+        [
+          1,
+          2,
+          null,
+          3,
+          null,
+          4,
+          null
+        ]
+      ],
+      "expected": [
+        [
+          4
+        ],
+        [
+          3
+        ],
+        [
+          2
+        ],
+        [
+          1
+        ]
+      ]
+    },
+    {
+      "name": "same row and column",
+      "args": [
+        [
+          3,
+          9,
+          8,
+          4,
+          0,
+          1,
+          7
+        ]
+      ],
+      "expected": [
+        [
+          4
+        ],
+        [
+          9
+        ],
+        [
+          3,
+          0,
+          1
+        ],
+        [
+          8
+        ],
+        [
+          7
+        ]
+      ]
+    }
+  ]
+}

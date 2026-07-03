@@ -1,0 +1,108 @@
+{
+  "id": "permutations",
+  "kind": "function",
+  "entry": "permute",
+  "names": {
+    "python": "permute"
+  },
+  "argTypes": [
+    "any"
+  ],
+  "returnType": "any",
+  "comparator": "unordered-nested",
+  "cases": [
+    {
+      "name": "should return all permutations for nums = [1, 2, 3]",
+      "args": [
+        [
+          1,
+          2,
+          3
+        ]
+      ],
+      "expected": [
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          1,
+          3,
+          2
+        ],
+        [
+          2,
+          1,
+          3
+        ],
+        [
+          2,
+          3,
+          1
+        ],
+        [
+          3,
+          1,
+          2
+        ],
+        [
+          3,
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "name": "should return the only permutation for nums = [7]",
+      "args": [
+        [
+          7
+        ]
+      ],
+      "expected": [
+        [
+          7
+        ]
+      ]
+    },
+    {
+      "name": "should return all permutations for nums = [0, 1]",
+      "args": [
+        [
+          0,
+          1
+        ]
+      ],
+      "expected": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "name": "should return all permutations for nums = [1, 2]",
+      "args": [
+        [
+          1,
+          2
+        ]
+      ],
+      "expected": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          1
+        ]
+      ]
+    }
+  ]
+}

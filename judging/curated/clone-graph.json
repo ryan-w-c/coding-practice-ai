@@ -1,0 +1,137 @@
+{
+  "id": "clone-graph",
+  "kind": "function",
+  "entry": "cloneGraph",
+  "names": {
+    "python": "clone_graph"
+  },
+  "argTypes": [
+    "GraphNode"
+  ],
+  "returnType": "GraphNode",
+  "comparator": "exact",
+  "mustCopy": 0,
+  "cases": [
+    {
+      "name": "path of three",
+      "args": [
+        [
+          [
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2
+        ]
+      ]
+    },
+    {
+      "name": "empty graph",
+      "args": [
+        []
+      ],
+      "expected": []
+    },
+    {
+      "name": "single node no edges",
+      "args": [
+        [
+          []
+        ]
+      ],
+      "expected": [
+        []
+      ]
+    },
+    {
+      "name": "square",
+      "args": [
+        [
+          [
+            2,
+            4
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            1,
+            3
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          2,
+          4
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          1,
+          3
+        ]
+      ]
+    },
+    {
+      "name": "triangle",
+      "args": [
+        [
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            2
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          2,
+          3
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          2
+        ]
+      ]
+    }
+  ]
+}

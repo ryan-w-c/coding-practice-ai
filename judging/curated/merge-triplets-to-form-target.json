@@ -1,0 +1,136 @@
+{
+  "id": "merge-triplets-to-form-target",
+  "kind": "function",
+  "entry": "mergeTriplets",
+  "names": {
+    "python": "merge_triplets"
+  },
+  "argTypes": [
+    "int[][]",
+    "int[]"
+  ],
+  "returnType": "bool",
+  "comparator": "exact",
+  "cases": [
+    {
+      "name": "classic true",
+      "args": [
+        [
+          [
+            2,
+            5,
+            3
+          ],
+          [
+            1,
+            8,
+            4
+          ],
+          [
+            1,
+            7,
+            5
+          ]
+        ],
+        [
+          2,
+          7,
+          5
+        ]
+      ],
+      "expected": true
+    },
+    {
+      "name": "classic false",
+      "args": [
+        [
+          [
+            3,
+            4,
+            5
+          ],
+          [
+            4,
+            5,
+            6
+          ]
+        ],
+        [
+          3,
+          2,
+          5
+        ]
+      ],
+      "expected": false
+    },
+    {
+      "name": "needs three triplets",
+      "args": [
+        [
+          [
+            2,
+            5,
+            3
+          ],
+          [
+            2,
+            3,
+            4
+          ],
+          [
+            1,
+            2,
+            5
+          ],
+          [
+            5,
+            2,
+            3
+          ]
+        ],
+        [
+          5,
+          5,
+          5
+        ]
+      ],
+      "expected": true
+    },
+    {
+      "name": "exact single triplet",
+      "args": [
+        [
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "expected": true
+    },
+    {
+      "name": "all exceed target",
+      "args": [
+        [
+          [
+            2,
+            2,
+            2
+          ]
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "expected": false
+    }
+  ]
+}

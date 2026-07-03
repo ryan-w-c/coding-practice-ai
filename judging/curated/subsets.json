@@ -1,0 +1,99 @@
+{
+  "id": "subsets",
+  "kind": "function",
+  "entry": "subsets",
+  "names": {
+    "python": "subsets"
+  },
+  "argTypes": [
+    "any"
+  ],
+  "returnType": "any",
+  "comparator": "unordered-nested",
+  "cases": [
+    {
+      "name": "should return all subsets for nums = [1, 2, 3]",
+      "args": [
+        [
+          1,
+          2,
+          3
+        ]
+      ],
+      "expected": [
+        [],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          3
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          1,
+          2,
+          3
+        ]
+      ]
+    },
+    {
+      "name": "should return all subsets for nums = [7]",
+      "args": [
+        [
+          7
+        ]
+      ],
+      "expected": [
+        [],
+        [
+          7
+        ]
+      ]
+    },
+    {
+      "name": "should return all subsets for nums = [0, 1]",
+      "args": [
+        [
+          0,
+          1
+        ]
+      ],
+      "expected": [
+        [],
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "name": "should return all subsets for an empty array",
+      "args": [
+        []
+      ],
+      "expected": [
+        []
+      ]
+    }
+  ]
+}

@@ -1,0 +1,148 @@
+{
+  "id": "lowest-common-ancestor-in-bst",
+  "kind": "function",
+  "entry": "lowestCommonAncestor",
+  "names": {
+    "python": "lowest_common_ancestor"
+  },
+  "argTypes": [
+    "TreeNode",
+    "int",
+    "int"
+  ],
+  "returnType": "TreeNode",
+  "comparator": "tree",
+  "cases": [
+    {
+      "name": "root is the split",
+      "args": [
+        [
+          6,
+          2,
+          8,
+          0,
+          4,
+          7,
+          9,
+          null,
+          null,
+          3,
+          5
+        ],
+        2,
+        8
+      ],
+      "expected": [
+        6,
+        2,
+        8,
+        0,
+        4,
+        7,
+        9,
+        null,
+        null,
+        3,
+        5
+      ]
+    },
+    {
+      "name": "ancestor is one of the nodes",
+      "args": [
+        [
+          6,
+          2,
+          8,
+          0,
+          4,
+          7,
+          9,
+          null,
+          null,
+          3,
+          5
+        ],
+        2,
+        4
+      ],
+      "expected": [
+        2,
+        0,
+        4,
+        null,
+        null,
+        3,
+        5
+      ]
+    },
+    {
+      "name": "deep split",
+      "args": [
+        [
+          6,
+          2,
+          8,
+          0,
+          4,
+          7,
+          9,
+          null,
+          null,
+          3,
+          5
+        ],
+        3,
+        5
+      ],
+      "expected": [
+        4,
+        3,
+        5
+      ]
+    },
+    {
+      "name": "two-node tree",
+      "args": [
+        [
+          2,
+          1
+        ],
+        2,
+        1
+      ],
+      "expected": [
+        2,
+        1
+      ]
+    },
+    {
+      "name": "leaves across subtrees",
+      "args": [
+        [
+          6,
+          2,
+          8,
+          0,
+          4,
+          7,
+          9,
+          null,
+          null,
+          3,
+          5
+        ],
+        0,
+        5
+      ],
+      "expected": [
+        2,
+        0,
+        4,
+        null,
+        null,
+        3,
+        5
+      ]
+    }
+  ]
+}

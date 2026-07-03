@@ -1,0 +1,72 @@
+{
+  "id": "sum-of-two-integers",
+  "kind": "function",
+  "entry": "getSum",
+  "names": {
+    "python": "get_sum"
+  },
+  "argTypes": [
+    "int",
+    "int"
+  ],
+  "returnType": "int",
+  "comparator": "exact",
+  "cases": [
+    {
+      "name": "small positives",
+      "args": [
+        1,
+        2
+      ],
+      "expected": 3
+    },
+    {
+      "name": "two and three",
+      "args": [
+        2,
+        3
+      ],
+      "expected": 5
+    },
+    {
+      "name": "cancel to zero",
+      "args": [
+        -1,
+        1
+      ],
+      "expected": 0
+    },
+    {
+      "name": "both negative",
+      "args": [
+        -12,
+        -8
+      ],
+      "expected": -20
+    },
+    {
+      "name": "zeros",
+      "args": [
+        0,
+        0
+      ],
+      "expected": 0
+    },
+    {
+      "name": "mixed signs",
+      "args": [
+        1000,
+        -999
+      ],
+      "expected": 1
+    },
+    {
+      "name": "large negatives",
+      "args": [
+        -1000,
+        -1000
+      ],
+      "expected": -2000
+    }
+  ]
+}

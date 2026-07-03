@@ -1,0 +1,69 @@
+{
+  "id": "serialize-and-deserialize-binary-tree",
+  "kind": "roundtrip",
+  "class": "Codec",
+  "names": {
+    "python": "Codec"
+  },
+  "encode": "serialize",
+  "decode": "deserialize",
+  "dataType": "TreeNode",
+  "comparator": "exact",
+  "cases": [
+    {
+      "name": "example tree",
+      "data": [
+        1,
+        2,
+        3,
+        null,
+        null,
+        4,
+        5
+      ]
+    },
+    {
+      "name": "empty tree",
+      "data": []
+    },
+    {
+      "name": "single node",
+      "data": [
+        1
+      ]
+    },
+    {
+      "name": "left-skewed",
+      "data": [
+        1,
+        2,
+        null,
+        3,
+        null,
+        4
+      ]
+    },
+    {
+      "name": "negative and multi-digit values",
+      "data": [
+        -10,
+        100,
+        -200,
+        null,
+        7
+      ]
+    },
+    {
+      "name": "full three levels",
+      "data": [
+        5,
+        3,
+        8,
+        1,
+        4,
+        7,
+        9
+      ]
+    }
+  ]
+}

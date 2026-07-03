@@ -1,0 +1,64 @@
+{
+  "id": "distinct-subsequences",
+  "kind": "function",
+  "entry": "numDistinct",
+  "names": {
+    "python": "num_distinct"
+  },
+  "argTypes": [
+    "string",
+    "string"
+  ],
+  "returnType": "int",
+  "comparator": "exact",
+  "cases": [
+    {
+      "name": "rabbbit -> rabbit",
+      "args": [
+        "rabbbit",
+        "rabbit"
+      ],
+      "expected": 3
+    },
+    {
+      "name": "babgbag -> bag",
+      "args": [
+        "babgbag",
+        "bag"
+      ],
+      "expected": 5
+    },
+    {
+      "name": "identical",
+      "args": [
+        "abc",
+        "abc"
+      ],
+      "expected": 1
+    },
+    {
+      "name": "no occurrence",
+      "args": [
+        "abc",
+        "d"
+      ],
+      "expected": 0
+    },
+    {
+      "name": "aaa -> a",
+      "args": [
+        "aaa",
+        "a"
+      ],
+      "expected": 3
+    },
+    {
+      "name": "aaa -> aa",
+      "args": [
+        "aaa",
+        "aa"
+      ],
+      "expected": 3
+    }
+  ]
+}

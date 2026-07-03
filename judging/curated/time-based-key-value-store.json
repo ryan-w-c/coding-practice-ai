@@ -1,0 +1,182 @@
+{
+  "id": "time-based-key-value-store",
+  "kind": "sequence",
+  "class": "TimeMap",
+  "names": {
+    "python": "TimeMap"
+  },
+  "comparator": "exact",
+  "cases": [
+    {
+      "name": "set then get at and after timestamps",
+      "steps": [
+        {
+          "method": "constructor",
+          "args": [],
+          "expected": null
+        },
+        {
+          "method": "set",
+          "args": [
+            "alice",
+            "happy",
+            1
+          ],
+          "expected": null
+        },
+        {
+          "method": "get",
+          "args": [
+            "alice",
+            1
+          ],
+          "expected": "happy"
+        },
+        {
+          "method": "get",
+          "args": [
+            "alice",
+            2
+          ],
+          "expected": "happy"
+        },
+        {
+          "method": "set",
+          "args": [
+            "alice",
+            "sad",
+            3
+          ],
+          "expected": null
+        },
+        {
+          "method": "get",
+          "args": [
+            "alice",
+            3
+          ],
+          "expected": "sad"
+        },
+        {
+          "method": "get",
+          "args": [
+            "alice",
+            2
+          ],
+          "expected": "happy"
+        }
+      ]
+    },
+    {
+      "name": "missing key returns empty string",
+      "steps": [
+        {
+          "method": "constructor",
+          "args": [],
+          "expected": null
+        },
+        {
+          "method": "get",
+          "args": [
+            "bob",
+            1
+          ],
+          "expected": ""
+        }
+      ]
+    },
+    {
+      "name": "multiple timestamps binary search",
+      "steps": [
+        {
+          "method": "constructor",
+          "args": [],
+          "expected": null
+        },
+        {
+          "method": "set",
+          "args": [
+            "bob",
+            "first",
+            1
+          ],
+          "expected": null
+        },
+        {
+          "method": "set",
+          "args": [
+            "bob",
+            "second",
+            5
+          ],
+          "expected": null
+        },
+        {
+          "method": "set",
+          "args": [
+            "bob",
+            "third",
+            10
+          ],
+          "expected": null
+        },
+        {
+          "method": "get",
+          "args": [
+            "bob",
+            0
+          ],
+          "expected": ""
+        },
+        {
+          "method": "get",
+          "args": [
+            "bob",
+            1
+          ],
+          "expected": "first"
+        },
+        {
+          "method": "get",
+          "args": [
+            "bob",
+            4
+          ],
+          "expected": "first"
+        },
+        {
+          "method": "get",
+          "args": [
+            "bob",
+            5
+          ],
+          "expected": "second"
+        },
+        {
+          "method": "get",
+          "args": [
+            "bob",
+            7
+          ],
+          "expected": "second"
+        },
+        {
+          "method": "get",
+          "args": [
+            "bob",
+            10
+          ],
+          "expected": "third"
+        },
+        {
+          "method": "get",
+          "args": [
+            "bob",
+            11
+          ],
+          "expected": "third"
+        }
+      ]
+    }
+  ]
+}

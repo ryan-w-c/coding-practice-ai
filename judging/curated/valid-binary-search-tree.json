@@ -1,0 +1,87 @@
+{
+  "id": "valid-binary-search-tree",
+  "kind": "function",
+  "entry": "isValidBST",
+  "names": {
+    "python": "is_valid_b_s_t"
+  },
+  "argTypes": [
+    "TreeNode"
+  ],
+  "returnType": "any",
+  "comparator": "exact",
+  "cases": [
+    {
+      "name": "should return true for Example 1",
+      "args": [
+        [
+          2,
+          1,
+          3
+        ]
+      ],
+      "expected": true
+    },
+    {
+      "name": "should return false for Example 2",
+      "args": [
+        [
+          1,
+          2,
+          3
+        ]
+      ],
+      "expected": false
+    },
+    {
+      "name": "should return true for a single-node tree",
+      "args": [
+        [
+          1
+        ]
+      ],
+      "expected": true
+    },
+    {
+      "name": "should return false for a tree with an invalid left subtree",
+      "args": [
+        [
+          10,
+          15,
+          20
+        ]
+      ],
+      "expected": false
+    },
+    {
+      "name": "should return true for a balanced valid BST",
+      "args": [
+        [
+          5,
+          3,
+          7,
+          2,
+          4,
+          6,
+          8
+        ]
+      ],
+      "expected": true
+    },
+    {
+      "name": "should return false for a tree where the right child is smaller than the root",
+      "args": [
+        [
+          5,
+          1,
+          4,
+          null,
+          null,
+          3,
+          6
+        ]
+      ],
+      "expected": false
+    }
+  ]
+}

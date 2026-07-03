@@ -1,0 +1,88 @@
+{
+  "id": "longest-increasing-subsequence",
+  "kind": "function",
+  "entry": "lengthOfLIS",
+  "names": {
+    "python": "length_of_lis"
+  },
+  "argTypes": [
+    "int[]"
+  ],
+  "returnType": "int",
+  "comparator": "exact",
+  "cases": [
+    {
+      "name": "classic",
+      "args": [
+        [
+          10,
+          9,
+          2,
+          5,
+          3,
+          7,
+          101,
+          18
+        ]
+      ],
+      "expected": 4
+    },
+    {
+      "name": "with duplicates",
+      "args": [
+        [
+          0,
+          1,
+          0,
+          3,
+          2,
+          3
+        ]
+      ],
+      "expected": 4
+    },
+    {
+      "name": "all equal",
+      "args": [
+        [
+          7,
+          7,
+          7,
+          7
+        ]
+      ],
+      "expected": 1
+    },
+    {
+      "name": "single",
+      "args": [
+        [
+          1
+        ]
+      ],
+      "expected": 1
+    },
+    {
+      "name": "strictly decreasing",
+      "args": [
+        [
+          5,
+          4,
+          3
+        ]
+      ],
+      "expected": 1
+    },
+    {
+      "name": "already increasing",
+      "args": [
+        [
+          1,
+          2,
+          3
+        ]
+      ],
+      "expected": 3
+    }
+  ]
+}

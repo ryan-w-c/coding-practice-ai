@@ -1,0 +1,79 @@
+{
+  "id": "combinations-of-a-phone-number",
+  "kind": "function",
+  "entry": "letterCombinations",
+  "names": {
+    "python": "letter_combinations"
+  },
+  "argTypes": [
+    "string"
+  ],
+  "returnType": "string[]",
+  "comparator": "unordered",
+  "cases": [
+    {
+      "name": "digits 34",
+      "args": [
+        "34"
+      ],
+      "expected": [
+        "dg",
+        "dh",
+        "di",
+        "eg",
+        "eh",
+        "ei",
+        "fg",
+        "fh",
+        "fi"
+      ]
+    },
+    {
+      "name": "empty digits",
+      "args": [
+        ""
+      ],
+      "expected": []
+    },
+    {
+      "name": "single digit",
+      "args": [
+        "2"
+      ],
+      "expected": [
+        "a",
+        "b",
+        "c"
+      ]
+    },
+    {
+      "name": "digits 23",
+      "args": [
+        "23"
+      ],
+      "expected": [
+        "ad",
+        "ae",
+        "af",
+        "bd",
+        "be",
+        "bf",
+        "cd",
+        "ce",
+        "cf"
+      ]
+    },
+    {
+      "name": "digit with four letters",
+      "args": [
+        "7"
+      ],
+      "expected": [
+        "p",
+        "q",
+        "r",
+        "s"
+      ]
+    }
+  ]
+}

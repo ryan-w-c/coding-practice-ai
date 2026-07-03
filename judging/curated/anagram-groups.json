@@ -1,0 +1,127 @@
+{
+  "id": "anagram-groups",
+  "kind": "function",
+  "entry": "groupAnagrams",
+  "names": {
+    "python": "group_anagrams"
+  },
+  "argTypes": [
+    "string[]"
+  ],
+  "returnType": "string[][]",
+  "comparator": "unordered-nested",
+  "cases": [
+    {
+      "name": "basic",
+      "args": [
+        [
+          "act",
+          "pots",
+          "tops",
+          "cat",
+          "stop",
+          "hat"
+        ]
+      ],
+      "expected": [
+        [
+          "act",
+          "cat"
+        ],
+        [
+          "pots",
+          "tops",
+          "stop"
+        ],
+        [
+          "hat"
+        ]
+      ]
+    },
+    {
+      "name": "single",
+      "args": [
+        [
+          "x"
+        ]
+      ],
+      "expected": [
+        [
+          "x"
+        ]
+      ]
+    },
+    {
+      "name": "empty string",
+      "args": [
+        [
+          ""
+        ]
+      ],
+      "expected": [
+        [
+          ""
+        ]
+      ]
+    },
+    {
+      "name": "some grouped",
+      "args": [
+        [
+          "abc",
+          "bca",
+          "a",
+          "cba"
+        ]
+      ],
+      "expected": [
+        [
+          "abc",
+          "bca",
+          "cba"
+        ],
+        [
+          "a"
+        ]
+      ]
+    },
+    {
+      "name": "all identical",
+      "args": [
+        [
+          "aaa",
+          "aaa",
+          "aaa"
+        ]
+      ],
+      "expected": [
+        [
+          "aaa",
+          "aaa",
+          "aaa"
+        ]
+      ]
+    },
+    {
+      "name": "none grouped",
+      "args": [
+        [
+          "abc",
+          "def",
+          "ghi"
+        ]
+      ],
+      "expected": [
+        [
+          "abc"
+        ],
+        [
+          "def"
+        ],
+        [
+          "ghi"
+        ]
+      ]
+    }
+  ]
+}

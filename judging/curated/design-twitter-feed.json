@@ -1,0 +1,281 @@
+{
+  "id": "design-twitter-feed",
+  "kind": "sequence",
+  "class": "Twitter",
+  "names": {
+    "python": "Twitter"
+  },
+  "comparator": "exact",
+  "cases": [
+    {
+      "name": "post and read own feed",
+      "steps": [
+        {
+          "method": "constructor",
+          "args": [],
+          "expected": null
+        },
+        {
+          "method": "postTweet",
+          "args": [
+            1,
+            10
+          ],
+          "expected": null
+        },
+        {
+          "method": "postTweet",
+          "args": [
+            2,
+            20
+          ],
+          "expected": null
+        },
+        {
+          "method": "getNewsFeed",
+          "args": [
+            1
+          ],
+          "expected": [
+            10
+          ]
+        },
+        {
+          "method": "getNewsFeed",
+          "args": [
+            2
+          ],
+          "expected": [
+            20
+          ]
+        }
+      ]
+    },
+    {
+      "name": "follow and unfollow",
+      "steps": [
+        {
+          "method": "constructor",
+          "args": [],
+          "expected": null
+        },
+        {
+          "method": "postTweet",
+          "args": [
+            1,
+            10
+          ],
+          "expected": null
+        },
+        {
+          "method": "postTweet",
+          "args": [
+            2,
+            20
+          ],
+          "expected": null
+        },
+        {
+          "method": "follow",
+          "args": [
+            1,
+            2
+          ],
+          "expected": null
+        },
+        {
+          "method": "getNewsFeed",
+          "args": [
+            1
+          ],
+          "expected": [
+            20,
+            10
+          ]
+        },
+        {
+          "method": "unfollow",
+          "args": [
+            1,
+            2
+          ],
+          "expected": null
+        },
+        {
+          "method": "getNewsFeed",
+          "args": [
+            1
+          ],
+          "expected": [
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "name": "feed capped at ten most recent",
+      "steps": [
+        {
+          "method": "constructor",
+          "args": [],
+          "expected": null
+        },
+        {
+          "method": "postTweet",
+          "args": [
+            1,
+            1
+          ],
+          "expected": null
+        },
+        {
+          "method": "postTweet",
+          "args": [
+            1,
+            2
+          ],
+          "expected": null
+        },
+        {
+          "method": "postTweet",
+          "args": [
+            1,
+            3
+          ],
+          "expected": null
+        },
+        {
+          "method": "postTweet",
+          "args": [
+            1,
+            4
+          ],
+          "expected": null
+        },
+        {
+          "method": "postTweet",
+          "args": [
+            1,
+            5
+          ],
+          "expected": null
+        },
+        {
+          "method": "postTweet",
+          "args": [
+            1,
+            6
+          ],
+          "expected": null
+        },
+        {
+          "method": "postTweet",
+          "args": [
+            1,
+            7
+          ],
+          "expected": null
+        },
+        {
+          "method": "postTweet",
+          "args": [
+            1,
+            8
+          ],
+          "expected": null
+        },
+        {
+          "method": "postTweet",
+          "args": [
+            1,
+            9
+          ],
+          "expected": null
+        },
+        {
+          "method": "postTweet",
+          "args": [
+            1,
+            10
+          ],
+          "expected": null
+        },
+        {
+          "method": "postTweet",
+          "args": [
+            1,
+            11
+          ],
+          "expected": null
+        },
+        {
+          "method": "postTweet",
+          "args": [
+            1,
+            12
+          ],
+          "expected": null
+        },
+        {
+          "method": "postTweet",
+          "args": [
+            1,
+            13
+          ],
+          "expected": null
+        },
+        {
+          "method": "postTweet",
+          "args": [
+            1,
+            14
+          ],
+          "expected": null
+        },
+        {
+          "method": "postTweet",
+          "args": [
+            1,
+            15
+          ],
+          "expected": null
+        },
+        {
+          "method": "getNewsFeed",
+          "args": [
+            1
+          ],
+          "expected": [
+            15,
+            14,
+            13,
+            12,
+            11,
+            10,
+            9,
+            8,
+            7,
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "name": "empty feed for unknown user",
+      "steps": [
+        {
+          "method": "constructor",
+          "args": [],
+          "expected": null
+        },
+        {
+          "method": "getNewsFeed",
+          "args": [
+            1
+          ],
+          "expected": []
+        }
+      ]
+    }
+  ]
+}

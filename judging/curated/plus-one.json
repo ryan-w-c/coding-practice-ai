@@ -1,0 +1,112 @@
+{
+  "id": "plus-one",
+  "kind": "function",
+  "entry": "plusOne",
+  "names": {
+    "python": "plus_one"
+  },
+  "argTypes": [
+    "int[]"
+  ],
+  "returnType": "int[]",
+  "comparator": "exact",
+  "cases": [
+    {
+      "name": "no carry",
+      "args": [
+        [
+          1,
+          2,
+          3
+        ]
+      ],
+      "expected": [
+        1,
+        2,
+        4
+      ]
+    },
+    {
+      "name": "longer no carry",
+      "args": [
+        [
+          4,
+          3,
+          2,
+          1
+        ]
+      ],
+      "expected": [
+        4,
+        3,
+        2,
+        2
+      ]
+    },
+    {
+      "name": "single nine",
+      "args": [
+        [
+          9
+        ]
+      ],
+      "expected": [
+        1,
+        0
+      ]
+    },
+    {
+      "name": "all nines",
+      "args": [
+        [
+          9,
+          9
+        ]
+      ],
+      "expected": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "zero",
+      "args": [
+        [
+          0
+        ]
+      ],
+      "expected": [
+        1
+      ]
+    },
+    {
+      "name": "carry stops mid-way",
+      "args": [
+        [
+          8,
+          9,
+          9
+        ]
+      ],
+      "expected": [
+        9,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "carry once",
+      "args": [
+        [
+          1,
+          9
+        ]
+      ],
+      "expected": [
+        2,
+        0
+      ]
+    }
+  ]
+}

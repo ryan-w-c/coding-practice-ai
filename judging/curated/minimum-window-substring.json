@@ -1,0 +1,64 @@
+{
+  "id": "minimum-window-substring",
+  "kind": "function",
+  "entry": "minWindow",
+  "names": {
+    "python": "min_window"
+  },
+  "argTypes": [
+    "string",
+    "string"
+  ],
+  "returnType": "string",
+  "comparator": "exact",
+  "cases": [
+    {
+      "name": "classic BANC",
+      "args": [
+        "ADOBECODEBANC",
+        "ABC"
+      ],
+      "expected": "BANC"
+    },
+    {
+      "name": "single char match",
+      "args": [
+        "a",
+        "a"
+      ],
+      "expected": "a"
+    },
+    {
+      "name": "not enough duplicates",
+      "args": [
+        "a",
+        "aa"
+      ],
+      "expected": ""
+    },
+    {
+      "name": "window at end",
+      "args": [
+        "ab",
+        "b"
+      ],
+      "expected": "b"
+    },
+    {
+      "name": "needs duplicate coverage",
+      "args": [
+        "bba",
+        "ab"
+      ],
+      "expected": "ba"
+    },
+    {
+      "name": "longer mixed case",
+      "args": [
+        "cabwefgewcwaefgcf",
+        "cae"
+      ],
+      "expected": "cwae"
+    }
+  ]
+}

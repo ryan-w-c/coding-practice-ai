@@ -1,0 +1,82 @@
+{
+  "id": "merge-two-sorted-lists",
+  "kind": "function",
+  "entry": "mergeTwoLists",
+  "names": {
+    "python": "merge_two_lists"
+  },
+  "argTypes": [
+    "ListNode",
+    "ListNode"
+  ],
+  "returnType": "ListNode",
+  "comparator": "exact",
+  "cases": [
+    {
+      "name": "should merge two sorted lists correctly",
+      "args": [
+        [
+          1,
+          2,
+          4
+        ],
+        [
+          1,
+          3,
+          4
+        ]
+      ],
+      "expected": [
+        1,
+        1,
+        2,
+        3,
+        4,
+        4
+      ]
+    },
+    {
+      "name": "should handle empty lists",
+      "args": [
+        null,
+        null
+      ],
+      "expected": []
+    },
+    {
+      "name": "should handle one empty list and one non-empty list",
+      "args": [
+        null,
+        [
+          0
+        ]
+      ],
+      "expected": [
+        0
+      ]
+    },
+    {
+      "name": "should handle two lists where all elements are the same",
+      "args": [
+        [
+          2,
+          2,
+          2
+        ],
+        [
+          2,
+          2,
+          2
+        ]
+      ],
+      "expected": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    }
+  ]
+}

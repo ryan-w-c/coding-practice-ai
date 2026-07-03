@@ -1,0 +1,128 @@
+{
+  "id": "reverse-nodes-in-k-group",
+  "kind": "function",
+  "entry": "reverseKGroup",
+  "names": {
+    "python": "reverse_k_group"
+  },
+  "argTypes": [
+    "ListNode",
+    "int"
+  ],
+  "returnType": "ListNode",
+  "comparator": "linkedlist",
+  "cases": [
+    {
+      "name": "pairs",
+      "args": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        2
+      ],
+      "expected": [
+        2,
+        1,
+        4,
+        3,
+        5
+      ]
+    },
+    {
+      "name": "threes with leftover",
+      "args": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        3
+      ],
+      "expected": [
+        3,
+        2,
+        1,
+        4,
+        5
+      ]
+    },
+    {
+      "name": "k=1 unchanged",
+      "args": [
+        [
+          1,
+          2,
+          3
+        ],
+        1
+      ],
+      "expected": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "name": "k equals length",
+      "args": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        5
+      ],
+      "expected": [
+        5,
+        4,
+        3,
+        2,
+        1
+      ]
+    },
+    {
+      "name": "single node",
+      "args": [
+        [
+          1
+        ],
+        1
+      ],
+      "expected": [
+        1
+      ]
+    },
+    {
+      "name": "two full groups plus tail",
+      "args": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        3
+      ],
+      "expected": [
+        3,
+        2,
+        1,
+        6,
+        5,
+        4,
+        7
+      ]
+    }
+  ]
+}

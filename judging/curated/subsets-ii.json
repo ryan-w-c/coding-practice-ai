@@ -1,0 +1,112 @@
+{
+  "id": "subsets-ii",
+  "kind": "function",
+  "entry": "subsetsWithDup",
+  "names": {
+    "python": "subsets_with_dup"
+  },
+  "argTypes": [
+    "any"
+  ],
+  "returnType": "any",
+  "comparator": "unordered-nested",
+  "cases": [
+    {
+      "name": "Example 2",
+      "args": [
+        [
+          7,
+          7
+        ]
+      ],
+      "expected": [
+        [],
+        [
+          7
+        ],
+        [
+          7,
+          7
+        ]
+      ]
+    },
+    {
+      "name": "No duplicates",
+      "args": [
+        [
+          1,
+          2,
+          3
+        ]
+      ],
+      "expected": [
+        [],
+        [
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3
+        ]
+      ]
+    },
+    {
+      "name": "Single element",
+      "args": [
+        [
+          5
+        ]
+      ],
+      "expected": [
+        [],
+        [
+          5
+        ]
+      ]
+    },
+    {
+      "name": "All elements the same",
+      "args": [
+        [
+          4,
+          4,
+          4
+        ]
+      ],
+      "expected": [
+        [],
+        [
+          4
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          4,
+          4,
+          4
+        ]
+      ]
+    }
+  ]
+}

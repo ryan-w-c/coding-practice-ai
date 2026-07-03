@@ -1,0 +1,62 @@
+{
+  "id": "min-cost-climbing-stairs",
+  "kind": "function",
+  "entry": "minCostClimbingStairs",
+  "names": {
+    "python": "min_cost_climbing_stairs"
+  },
+  "argTypes": [
+    "any"
+  ],
+  "returnType": "any",
+  "comparator": "exact",
+  "cases": [
+    {
+      "name": "should return 2 for cost = [1, 2, 3]",
+      "args": [
+        [
+          1,
+          2,
+          3
+        ]
+      ],
+      "expected": 2
+    },
+    {
+      "name": "should return 4 for cost = [1, 2, 1, 2, 1, 1, 1]",
+      "args": [
+        [
+          1,
+          2,
+          1,
+          2,
+          1,
+          1,
+          1
+        ]
+      ],
+      "expected": 4
+    },
+    {
+      "name": "should return 0 for cost = [0, 0]",
+      "args": [
+        [
+          0,
+          0
+        ]
+      ],
+      "expected": 0
+    },
+    {
+      "name": "should return 15 for cost = [10, 15, 20]",
+      "args": [
+        [
+          10,
+          15,
+          20
+        ]
+      ],
+      "expected": 15
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "id": "regular-expression-matching",
+  "kind": "function",
+  "entry": "isMatch",
+  "names": {
+    "python": "is_match"
+  },
+  "argTypes": [
+    "string",
+    "string"
+  ],
+  "returnType": "bool",
+  "comparator": "exact",
+  "cases": [
+    {
+      "name": "aa vs a",
+      "args": [
+        "aa",
+        "a"
+      ],
+      "expected": false
+    },
+    {
+      "name": "star repeats",
+      "args": [
+        "aa",
+        "a*"
+      ],
+      "expected": true
+    },
+    {
+      "name": "dot star matches all",
+      "args": [
+        "ab",
+        ".*"
+      ],
+      "expected": true
+    },
+    {
+      "name": "mississippi false",
+      "args": [
+        "mississippi",
+        "mis*is*p*."
+      ],
+      "expected": false
+    },
+    {
+      "name": "zero occurrences",
+      "args": [
+        "aab",
+        "c*a*b"
+      ],
+      "expected": true
+    },
+    {
+      "name": "trailing literal fails",
+      "args": [
+        "ab",
+        ".*c"
+      ],
+      "expected": false
+    },
+    {
+      "name": "star then literal",
+      "args": [
+        "aaa",
+        "a*a"
+      ],
+      "expected": true
+    },
+    {
+      "name": "star matches empty tail",
+      "args": [
+        "a",
+        "ab*"
+      ],
+      "expected": true
+    }
+  ]
+}

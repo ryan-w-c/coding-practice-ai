@@ -1,0 +1,102 @@
+{
+  "id": "longest-increasing-path-in-a-matrix",
+  "kind": "function",
+  "entry": "longestIncreasingPath",
+  "names": {
+    "python": "longest_increasing_path"
+  },
+  "argTypes": [
+    "int[][]"
+  ],
+  "returnType": "int",
+  "comparator": "exact",
+  "cases": [
+    {
+      "name": "classic 9946",
+      "args": [
+        [
+          [
+            9,
+            9,
+            4
+          ],
+          [
+            6,
+            6,
+            8
+          ],
+          [
+            2,
+            1,
+            1
+          ]
+        ]
+      ],
+      "expected": 4
+    },
+    {
+      "name": "classic spiral-ish",
+      "args": [
+        [
+          [
+            3,
+            4,
+            5
+          ],
+          [
+            3,
+            2,
+            6
+          ],
+          [
+            2,
+            2,
+            1
+          ]
+        ]
+      ],
+      "expected": 4
+    },
+    {
+      "name": "single cell",
+      "args": [
+        [
+          [
+            1
+          ]
+        ]
+      ],
+      "expected": 1
+    },
+    {
+      "name": "single increasing row",
+      "args": [
+        [
+          [
+            1,
+            2,
+            3,
+            4
+          ]
+        ]
+      ],
+      "expected": 4
+    },
+    {
+      "name": "all equal",
+      "args": [
+        [
+          [
+            7,
+            7
+          ],
+          [
+            7,
+            7
+          ]
+        ]
+      ],
+      "expected": 1
+    }
+  ]
+}

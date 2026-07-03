@@ -1,0 +1,72 @@
+{
+  "id": "single-number",
+  "kind": "function",
+  "entry": "singleNumber",
+  "names": {
+    "python": "single_number"
+  },
+  "argTypes": [
+    "int[]"
+  ],
+  "returnType": "int",
+  "comparator": "exact",
+  "cases": [
+    {
+      "name": "pair around single",
+      "args": [
+        [
+          2,
+          2,
+          1
+        ]
+      ],
+      "expected": 1
+    },
+    {
+      "name": "single in middle",
+      "args": [
+        [
+          4,
+          1,
+          2,
+          1,
+          2
+        ]
+      ],
+      "expected": 4
+    },
+    {
+      "name": "one element",
+      "args": [
+        [
+          1
+        ]
+      ],
+      "expected": 1
+    },
+    {
+      "name": "pairs then single",
+      "args": [
+        [
+          7,
+          6,
+          6,
+          7,
+          8
+        ]
+      ],
+      "expected": 8
+    },
+    {
+      "name": "negative single",
+      "args": [
+        [
+          -1,
+          -1,
+          -2
+        ]
+      ],
+      "expected": -2
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "id": "subtree-of-a-binary-tree",
+  "kind": "function",
+  "entry": "isSubtree",
+  "names": {
+    "python": "is_subtree"
+  },
+  "argTypes": [
+    "TreeNode",
+    "TreeNode"
+  ],
+  "returnType": "any",
+  "comparator": "exact",
+  "cases": [
+    {
+      "name": "should return true for Example 1",
+      "args": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        [
+          2,
+          4,
+          5
+        ]
+      ],
+      "expected": true
+    },
+    {
+      "name": "should return false for Example 2",
+      "args": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          null,
+          null,
+          6
+        ],
+        [
+          2,
+          4,
+          5
+        ]
+      ],
+      "expected": false
+    },
+    {
+      "name": "should return true for the same tree",
+      "args": [
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          1,
+          2,
+          3
+        ]
+      ],
+      "expected": true
+    },
+    {
+      "name": "should return false for an empty subRoot and a non-empty root",
+      "args": [
+        [
+          1,
+          2,
+          3
+        ],
+        null
+      ],
+      "expected": true
+    },
+    {
+      "name": "should return true for both empty root and subRoot",
+      "args": [
+        null,
+        null
+      ],
+      "expected": true
+    },
+    {
+      "name": "should handle a single-node tree",
+      "args": [
+        [
+          1
+        ],
+        [
+          1
+        ]
+      ],
+      "expected": true
+    }
+  ]
+}

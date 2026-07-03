@@ -1,0 +1,115 @@
+{
+  "id": "daily-temperatures",
+  "kind": "function",
+  "entry": "dailyTemperatures",
+  "names": {
+    "python": "daily_temperatures"
+  },
+  "argTypes": [
+    "any"
+  ],
+  "returnType": "any",
+  "comparator": "exact",
+  "cases": [
+    {
+      "name": "should return correct days for a normal sequence",
+      "args": [
+        [
+          30,
+          38,
+          30,
+          36,
+          35,
+          40,
+          28
+        ]
+      ],
+      "expected": [
+        1,
+        4,
+        1,
+        2,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "should return all zeros for a decreasing temperature sequence",
+      "args": [
+        [
+          22,
+          21,
+          20
+        ]
+      ],
+      "expected": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "should return correct result for a sequence with no future warmer day",
+      "args": [
+        [
+          30,
+          29,
+          31
+        ]
+      ],
+      "expected": [
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "name": "should handle a single temperature value",
+      "args": [
+        [
+          25
+        ]
+      ],
+      "expected": [
+        0
+      ]
+    },
+    {
+      "name": "should handle a sequence with multiple identical temperatures",
+      "args": [
+        [
+          30,
+          30,
+          30,
+          40
+        ]
+      ],
+      "expected": [
+        3,
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "name": "should return correct result for alternating temperatures",
+      "args": [
+        [
+          31,
+          32,
+          31,
+          32,
+          31
+        ]
+      ],
+      "expected": [
+        1,
+        0,
+        1,
+        0,
+        0
+      ]
+    }
+  ]
+}

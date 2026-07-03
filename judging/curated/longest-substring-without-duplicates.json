@@ -1,0 +1,64 @@
+{
+  "id": "longest-substring-without-duplicates",
+  "kind": "function",
+  "entry": "lengthOfLongestSubstring",
+  "names": {
+    "python": "length_of_longest_substring"
+  },
+  "argTypes": [
+    "any"
+  ],
+  "returnType": "any",
+  "comparator": "exact",
+  "cases": [
+    {
+      "name": "should return the correct length for 'zxyzxyz'",
+      "args": [
+        "zxyzxyz"
+      ],
+      "expected": 3
+    },
+    {
+      "name": "should return the correct length for 'xxxx'",
+      "args": [
+        "xxxx"
+      ],
+      "expected": 1
+    },
+    {
+      "name": "should return 0 for an empty string",
+      "args": [
+        ""
+      ],
+      "expected": 0
+    },
+    {
+      "name": "should return the length of the entire string when there are no duplicates",
+      "args": [
+        "abcdef"
+      ],
+      "expected": 6
+    },
+    {
+      "name": "should return the correct length for a complex mixed string",
+      "args": [
+        "abcabcbb"
+      ],
+      "expected": 3
+    },
+    {
+      "name": "should handle special characters and numbers",
+      "args": [
+        "a1b2c3!"
+      ],
+      "expected": 7
+    },
+    {
+      "name": "should return the correct length for a single character string",
+      "args": [
+        "a"
+      ],
+      "expected": 1
+    }
+  ]
+}

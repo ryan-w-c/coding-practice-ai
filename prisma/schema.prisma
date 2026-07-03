@@ -1,0 +1,90 @@
+// Adaptive Coding Interview Trainer — local single-user SQLite DB.
+// See DESIGN.md §7.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Pattern {
+  id          String    @id // "arrays-hashing"
+  name        String
+  order       Int
+  targetCount Int // breadth target (§9)
+  problems    Problem[]
+}
+
+model Problem {
+  id          String          @id // "two-sum"
+  title       String
+  url         String // statement link (neetcode.io / leetcode)
+  difficulty  Difficulty // E | M | H
+  patternId   String
+  pattern     Pattern         @relation(fields: [patternId], references: [id])
+  dir         String // path in vendor/neetcode-150/
+  solutionFile String         @default("index.ts") // file inside dir holding the Solution
+  starterCode String // template loaded into editor
+  judged      Boolean         @default(false) // reference solution passes its tests
+  genTests    GeneratedTest[]
+  attempts    Attempt[]
+}
+
+enum Difficulty {
+  E
+  M
+  H
+}
+
+model GeneratedTest {
+  id        String  @id @default(cuid())
+  problemId String
+  problem   Problem @relation(fields: [problemId], references: [id])
+  source    String  @default("generated")
+  testCode  String
+}
+
+model Attempt {
+  id           String   @id @default(cuid())
+  problemId    String
+  problem      Problem  @relation(fields: [problemId], references: [id])
+  createdAt    DateTime @default(now())
+  verdict      Verdict
+  passed       Int
+  total        Int
+  failingTests Json?
+  outcome      Outcome
+  code         String    @default("") // snapshot of the submitted solution
+  language     String    @default("typescript")
+  timeSpentMin Int?
+  confidence   Int?
+  notes        String?
+  nextReviewAt DateTime?
+  interval     Int      @default(0)
+}
+
+enum Verdict {
+  accepted
+  wrong
+  tle
+  error
+}
+
+enum Outcome {
+  clean
+  hinted
+  solution
+  failed
+}
+
+model ChatMessage {
+  id        String   @id @default(cuid())
+  problemId String?
+  role      String
+  content   String
+  mode      String?
+  createdAt DateTime @default(now())
+}

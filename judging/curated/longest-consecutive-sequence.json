@@ -1,0 +1,90 @@
+{
+  "id": "longest-consecutive-sequence",
+  "kind": "function",
+  "entry": "longestConsecutive",
+  "names": {
+    "python": "longest_consecutive"
+  },
+  "argTypes": [
+    "any"
+  ],
+  "returnType": "any",
+  "comparator": "exact",
+  "cases": [
+    {
+      "name": "should return the length of the longest consecutive sequence for example 1",
+      "args": [
+        [
+          2,
+          20,
+          4,
+          10,
+          3,
+          4,
+          5
+        ]
+      ],
+      "expected": 4
+    },
+    {
+      "name": "should return the length of the longest consecutive sequence for example 2",
+      "args": [
+        [
+          0,
+          3,
+          2,
+          5,
+          4,
+          6,
+          1,
+          1
+        ]
+      ],
+      "expected": 7
+    },
+    {
+      "name": "should return 0 for an empty array",
+      "args": [
+        []
+      ],
+      "expected": 0
+    },
+    {
+      "name": "should return 1 for an array with all identical elements",
+      "args": [
+        [
+          5,
+          5,
+          5,
+          5
+        ]
+      ],
+      "expected": 1
+    },
+    {
+      "name": "should handle an already consecutive sequence",
+      "args": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      ],
+      "expected": 5
+    },
+    {
+      "name": "should handle a disjointed array",
+      "args": [
+        [
+          10,
+          30,
+          20,
+          40
+        ]
+      ],
+      "expected": 1
+    }
+  ]
+}

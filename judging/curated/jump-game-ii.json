@@ -1,0 +1,103 @@
+{
+  "id": "jump-game-ii",
+  "kind": "function",
+  "entry": "jump",
+  "names": {
+    "python": "jump"
+  },
+  "argTypes": [
+    "any"
+  ],
+  "returnType": "any",
+  "comparator": "exact",
+  "cases": [
+    {
+      "name": "Example 1",
+      "args": [
+        [
+          2,
+          4,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "expected": 2
+    },
+    {
+      "name": "Example 2",
+      "args": [
+        [
+          2,
+          1,
+          2,
+          1,
+          0
+        ]
+      ],
+      "expected": 2
+    },
+    {
+      "name": "Single element",
+      "args": [
+        [
+          0
+        ]
+      ],
+      "expected": 0
+    },
+    {
+      "name": "Multiple large jumps",
+      "args": [
+        [
+          5,
+          9,
+          3,
+          2,
+          1,
+          0,
+          2,
+          3,
+          3,
+          1,
+          0,
+          0
+        ]
+      ],
+      "expected": 3
+    },
+    {
+      "name": "All steps are 1",
+      "args": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "expected": 4
+    },
+    {
+      "name": "Larger range values",
+      "args": [
+        [
+          10,
+          9,
+          8,
+          7,
+          6,
+          5,
+          4,
+          3,
+          2,
+          1,
+          1
+        ]
+      ],
+      "expected": 1
+    }
+  ]
+}

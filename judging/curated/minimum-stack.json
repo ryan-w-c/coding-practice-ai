@@ -1,0 +1,237 @@
+{
+  "id": "minimum-stack",
+  "kind": "sequence",
+  "class": "MinStack",
+  "names": {
+    "python": "MinStack"
+  },
+  "comparator": "exact",
+  "cases": [
+    {
+      "name": "push pop top getMin",
+      "steps": [
+        {
+          "method": "constructor",
+          "args": [],
+          "expected": null
+        },
+        {
+          "method": "push",
+          "args": [
+            1
+          ],
+          "expected": null
+        },
+        {
+          "method": "push",
+          "args": [
+            2
+          ],
+          "expected": null
+        },
+        {
+          "method": "push",
+          "args": [
+            0
+          ],
+          "expected": null
+        },
+        {
+          "method": "getMin",
+          "args": [],
+          "expected": 0
+        },
+        {
+          "method": "pop",
+          "args": [],
+          "expected": null
+        },
+        {
+          "method": "top",
+          "args": [],
+          "expected": 2
+        },
+        {
+          "method": "getMin",
+          "args": [],
+          "expected": 1
+        }
+      ]
+    },
+    {
+      "name": "min tracks pops",
+      "steps": [
+        {
+          "method": "constructor",
+          "args": [],
+          "expected": null
+        },
+        {
+          "method": "push",
+          "args": [
+            3
+          ],
+          "expected": null
+        },
+        {
+          "method": "push",
+          "args": [
+            5
+          ],
+          "expected": null
+        },
+        {
+          "method": "getMin",
+          "args": [],
+          "expected": 3
+        },
+        {
+          "method": "push",
+          "args": [
+            2
+          ],
+          "expected": null
+        },
+        {
+          "method": "push",
+          "args": [
+            1
+          ],
+          "expected": null
+        },
+        {
+          "method": "getMin",
+          "args": [],
+          "expected": 1
+        },
+        {
+          "method": "pop",
+          "args": [],
+          "expected": null
+        },
+        {
+          "method": "getMin",
+          "args": [],
+          "expected": 2
+        },
+        {
+          "method": "pop",
+          "args": [],
+          "expected": null
+        },
+        {
+          "method": "getMin",
+          "args": [],
+          "expected": 3
+        }
+      ]
+    },
+    {
+      "name": "duplicate minimums",
+      "steps": [
+        {
+          "method": "constructor",
+          "args": [],
+          "expected": null
+        },
+        {
+          "method": "push",
+          "args": [
+            2
+          ],
+          "expected": null
+        },
+        {
+          "method": "push",
+          "args": [
+            2
+          ],
+          "expected": null
+        },
+        {
+          "method": "push",
+          "args": [
+            3
+          ],
+          "expected": null
+        },
+        {
+          "method": "getMin",
+          "args": [],
+          "expected": 2
+        },
+        {
+          "method": "pop",
+          "args": [],
+          "expected": null
+        },
+        {
+          "method": "getMin",
+          "args": [],
+          "expected": 2
+        },
+        {
+          "method": "pop",
+          "args": [],
+          "expected": null
+        },
+        {
+          "method": "getMin",
+          "args": [],
+          "expected": 2
+        }
+      ]
+    },
+    {
+      "name": "negative values",
+      "steps": [
+        {
+          "method": "constructor",
+          "args": [],
+          "expected": null
+        },
+        {
+          "method": "push",
+          "args": [
+            -2
+          ],
+          "expected": null
+        },
+        {
+          "method": "push",
+          "args": [
+            0
+          ],
+          "expected": null
+        },
+        {
+          "method": "push",
+          "args": [
+            -3
+          ],
+          "expected": null
+        },
+        {
+          "method": "getMin",
+          "args": [],
+          "expected": -3
+        },
+        {
+          "method": "pop",
+          "args": [],
+          "expected": null
+        },
+        {
+          "method": "top",
+          "args": [],
+          "expected": 0
+        },
+        {
+          "method": "getMin",
+          "args": [],
+          "expected": -2
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "id": "generate-parentheses",
+  "kind": "function",
+  "entry": "generateParenthesis",
+  "names": {
+    "python": "generate_parenthesis"
+  },
+  "argTypes": [
+    "int"
+  ],
+  "returnType": "string[]",
+  "comparator": "unordered",
+  "cases": [
+    {
+      "name": "n = 1",
+      "args": [
+        1
+      ],
+      "expected": [
+        "()"
+      ]
+    },
+    {
+      "name": "n = 2",
+      "args": [
+        2
+      ],
+      "expected": [
+        "(())",
+        "()()"
+      ]
+    },
+    {
+      "name": "n = 3",
+      "args": [
+        3
+      ],
+      "expected": [
+        "((()))",
+        "(()())",
+        "(())()",
+        "()(())",
+        "()()()"
+      ]
+    },
+    {
+      "name": "n = 4",
+      "args": [
+        4
+      ],
+      "expected": [
+        "(((())))",
+        "((()()))",
+        "((())())",
+        "((()))()",
+        "(()(()))",
+        "(()()())",
+        "(()())()",
+        "(())(())",
+        "(())()()",
+        "()((()))",
+        "()(()())",
+        "()(())()",
+        "()()(())",
+        "()()()()"
+      ]
+    }
+  ]
+}

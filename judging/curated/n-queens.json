@@ -1,0 +1,60 @@
+{
+  "id": "n-queens",
+  "kind": "function",
+  "entry": "solveNQueens",
+  "names": {
+    "python": "solve_n_queens"
+  },
+  "argTypes": [
+    "int"
+  ],
+  "returnType": "string[][]",
+  "comparator": "unordered",
+  "cases": [
+    {
+      "name": "n = 4",
+      "args": [
+        4
+      ],
+      "expected": [
+        [
+          ".Q..",
+          "...Q",
+          "Q...",
+          "..Q."
+        ],
+        [
+          "..Q.",
+          "Q...",
+          "...Q",
+          ".Q.."
+        ]
+      ]
+    },
+    {
+      "name": "n = 1",
+      "args": [
+        1
+      ],
+      "expected": [
+        [
+          "Q"
+        ]
+      ]
+    },
+    {
+      "name": "n = 2 has no solution",
+      "args": [
+        2
+      ],
+      "expected": []
+    },
+    {
+      "name": "n = 3 has no solution",
+      "args": [
+        3
+      ],
+      "expected": []
+    }
+  ]
+}

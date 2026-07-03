@@ -1,0 +1,57 @@
+{
+  "id": "valid-parenthesis-string",
+  "kind": "function",
+  "entry": "checkValidString",
+  "names": {
+    "python": "check_valid_string"
+  },
+  "argTypes": [
+    "any"
+  ],
+  "returnType": "any",
+  "comparator": "exact",
+  "cases": [
+    {
+      "name": "should return true for s = '((**)'",
+      "args": [
+        "((**)"
+      ],
+      "expected": true
+    },
+    {
+      "name": "should return false for s = '(((*)'",
+      "args": [
+        "(((*)"
+      ],
+      "expected": false
+    },
+    {
+      "name": "should return true for s = '(*))'",
+      "args": [
+        "(*))"
+      ],
+      "expected": true
+    },
+    {
+      "name": "should return true for s = ''",
+      "args": [
+        ""
+      ],
+      "expected": true
+    },
+    {
+      "name": "should return false for s = ')('",
+      "args": [
+        ")("
+      ],
+      "expected": false
+    },
+    {
+      "name": "should return true for s = '(*()'",
+      "args": [
+        "(*()"
+      ],
+      "expected": true
+    }
+  ]
+}

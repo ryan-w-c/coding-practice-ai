@@ -1,0 +1,132 @@
+{
+  "id": "network-delay-time",
+  "kind": "function",
+  "entry": "networkDelayTime",
+  "names": {
+    "python": "network_delay_time"
+  },
+  "argTypes": [
+    "int[][]",
+    "int",
+    "int"
+  ],
+  "returnType": "int",
+  "comparator": "exact",
+  "cases": [
+    {
+      "name": "classic chain",
+      "args": [
+        [
+          [
+            2,
+            1,
+            1
+          ],
+          [
+            2,
+            3,
+            1
+          ],
+          [
+            3,
+            4,
+            1
+          ]
+        ],
+        4,
+        2
+      ],
+      "expected": 2
+    },
+    {
+      "name": "single edge reachable",
+      "args": [
+        [
+          [
+            1,
+            2,
+            1
+          ]
+        ],
+        2,
+        1
+      ],
+      "expected": 1
+    },
+    {
+      "name": "unreachable node",
+      "args": [
+        [
+          [
+            1,
+            2,
+            1
+          ]
+        ],
+        2,
+        2
+      ],
+      "expected": -1
+    },
+    {
+      "name": "two-way edge",
+      "args": [
+        [
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            2,
+            1,
+            3
+          ]
+        ],
+        2,
+        2
+      ],
+      "expected": 3
+    },
+    {
+      "name": "third node isolated",
+      "args": [
+        [
+          [
+            1,
+            2,
+            1
+          ]
+        ],
+        3,
+        1
+      ],
+      "expected": -1
+    },
+    {
+      "name": "shorter path wins",
+      "args": [
+        [
+          [
+            1,
+            2,
+            10
+          ],
+          [
+            1,
+            3,
+            1
+          ],
+          [
+            3,
+            2,
+            2
+          ]
+        ],
+        3,
+        1
+      ],
+      "expected": 3
+    }
+  ]
+}

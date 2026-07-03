@@ -1,0 +1,144 @@
+{
+  "id": "word-search-ii",
+  "kind": "function",
+  "entry": "findWords",
+  "names": {
+    "python": "find_words"
+  },
+  "argTypes": [
+    "string[][]",
+    "string[]"
+  ],
+  "returnType": "string[]",
+  "comparator": "unordered",
+  "cases": [
+    {
+      "name": "classic oath/eat board",
+      "args": [
+        [
+          [
+            "o",
+            "a",
+            "a",
+            "n"
+          ],
+          [
+            "e",
+            "t",
+            "a",
+            "e"
+          ],
+          [
+            "i",
+            "h",
+            "k",
+            "r"
+          ],
+          [
+            "i",
+            "f",
+            "l",
+            "v"
+          ]
+        ],
+        [
+          "oath",
+          "pea",
+          "eat",
+          "rain"
+        ]
+      ],
+      "expected": [
+        "oath",
+        "eat"
+      ]
+    },
+    {
+      "name": "cell reuse forbidden",
+      "args": [
+        [
+          [
+            "a",
+            "b"
+          ],
+          [
+            "c",
+            "d"
+          ]
+        ],
+        [
+          "abcb"
+        ]
+      ],
+      "expected": []
+    },
+    {
+      "name": "single cell",
+      "args": [
+        [
+          [
+            "a"
+          ]
+        ],
+        [
+          "a",
+          "aa"
+        ]
+      ],
+      "expected": [
+        "a"
+      ]
+    },
+    {
+      "name": "double letter row",
+      "args": [
+        [
+          [
+            "a",
+            "a"
+          ]
+        ],
+        [
+          "aa",
+          "aaa"
+        ]
+      ],
+      "expected": [
+        "aa"
+      ]
+    },
+    {
+      "name": "shared prefixes",
+      "args": [
+        [
+          [
+            "c",
+            "a",
+            "t"
+          ],
+          [
+            "x",
+            "d",
+            "x"
+          ],
+          [
+            "x",
+            "x",
+            "x"
+          ]
+        ],
+        [
+          "cat",
+          "cad",
+          "ca",
+          "dog"
+        ]
+      ],
+      "expected": [
+        "cat",
+        "cad",
+        "ca"
+      ]
+    }
+  ]
+}

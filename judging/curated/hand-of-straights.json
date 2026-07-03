@@ -1,0 +1,98 @@
+{
+  "id": "hand-of-straights",
+  "kind": "function",
+  "entry": "isNStraightHand",
+  "names": {
+    "python": "is_n_straight_hand"
+  },
+  "argTypes": [
+    "int[]",
+    "int"
+  ],
+  "returnType": "bool",
+  "comparator": "exact",
+  "cases": [
+    {
+      "name": "classic true",
+      "args": [
+        [
+          1,
+          2,
+          3,
+          6,
+          2,
+          3,
+          4,
+          7,
+          8
+        ],
+        3
+      ],
+      "expected": true
+    },
+    {
+      "name": "length not divisible",
+      "args": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        4
+      ],
+      "expected": false
+    },
+    {
+      "name": "single card",
+      "args": [
+        [
+          1
+        ],
+        1
+      ],
+      "expected": true
+    },
+    {
+      "name": "duplicate straights",
+      "args": [
+        [
+          1,
+          1,
+          2,
+          2,
+          3,
+          3
+        ],
+        3
+      ],
+      "expected": true
+    },
+    {
+      "name": "gap breaks group",
+      "args": [
+        [
+          1,
+          1,
+          2,
+          3
+        ],
+        2
+      ],
+      "expected": false
+    },
+    {
+      "name": "groups of one",
+      "args": [
+        [
+          8,
+          10,
+          12
+        ],
+        1
+      ],
+      "expected": true
+    }
+  ]
+}

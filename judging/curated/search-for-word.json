@@ -1,0 +1,129 @@
+{
+  "id": "search-for-word",
+  "kind": "function",
+  "entry": "exist",
+  "names": {
+    "python": "exist"
+  },
+  "argTypes": [
+    "any",
+    "any"
+  ],
+  "returnType": "any",
+  "comparator": "exact",
+  "cases": [
+    {
+      "name": "should return true for word 'CAT' in the given board",
+      "args": [
+        [
+          [
+            "A",
+            "B",
+            "C",
+            "D"
+          ],
+          [
+            "S",
+            "A",
+            "A",
+            "T"
+          ],
+          [
+            "A",
+            "C",
+            "A",
+            "E"
+          ]
+        ],
+        "CAT"
+      ],
+      "expected": true
+    },
+    {
+      "name": "should return false for word 'BAT' in the given board",
+      "args": [
+        [
+          [
+            "A",
+            "B",
+            "C",
+            "D"
+          ],
+          [
+            "S",
+            "A",
+            "A",
+            "T"
+          ],
+          [
+            "A",
+            "C",
+            "A",
+            "E"
+          ]
+        ],
+        "BAT"
+      ],
+      "expected": false
+    },
+    {
+      "name": "should return true for word 'ACAE' in the given board",
+      "args": [
+        [
+          [
+            "A",
+            "B",
+            "C",
+            "D"
+          ],
+          [
+            "S",
+            "A",
+            "A",
+            "T"
+          ],
+          [
+            "A",
+            "C",
+            "A",
+            "E"
+          ]
+        ],
+        "ACAE"
+      ],
+      "expected": true
+    },
+    {
+      "name": "should return false for an empty board",
+      "args": [
+        [],
+        "A"
+      ],
+      "expected": false
+    },
+    {
+      "name": "should return true for word 'A' on a single-cell board",
+      "args": [
+        [
+          [
+            "A"
+          ]
+        ],
+        "A"
+      ],
+      "expected": true
+    },
+    {
+      "name": "should return false for word 'B' on a single-cell board with 'A'",
+      "args": [
+        [
+          [
+            "A"
+          ]
+        ],
+        "B"
+      ],
+      "expected": false
+    }
+  ]
+}

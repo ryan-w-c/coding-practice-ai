@@ -1,0 +1,113 @@
+{
+  "id": "rotting-fruit",
+  "kind": "function",
+  "entry": "rottingFruit",
+  "names": {
+    "python": "rotting_fruit"
+  },
+  "argTypes": [
+    "any"
+  ],
+  "returnType": "any",
+  "comparator": "exact",
+  "cases": [
+    {
+      "name": "should return 4 for grid [[1,1,0],[0,1,1],[0,1,2]]",
+      "args": [
+        [
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            1,
+            2
+          ]
+        ]
+      ],
+      "expected": 4
+    },
+    {
+      "name": "should return -1 for grid [[1,0,1],[0,2,0],[1,0,1]]",
+      "args": [
+        [
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ]
+        ]
+      ],
+      "expected": -1
+    },
+    {
+      "name": "should return 0 for grid [[0, 0], [0, 0]] (no fruits)",
+      "args": [
+        [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      ],
+      "expected": 0
+    },
+    {
+      "name": "should return 1 for grid [[2, 1, 0]]",
+      "args": [
+        [
+          [
+            2,
+            1,
+            0
+          ]
+        ]
+      ],
+      "expected": 1
+    },
+    {
+      "name": "should return -1 for grid [[1, 1, 1], [1, 0, 1], [1, 1, 1]] (no rotten fruit to start)",
+      "args": [
+        [
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ]
+      ],
+      "expected": -1
+    }
+  ]
+}

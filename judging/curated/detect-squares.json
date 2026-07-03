@@ -1,0 +1,221 @@
+{
+  "id": "detect-squares",
+  "kind": "sequence",
+  "class": "DetectSquares",
+  "names": {
+    "python": "DetectSquares"
+  },
+  "comparator": "exact",
+  "cases": [
+    {
+      "name": "classic example with duplicate point",
+      "steps": [
+        {
+          "method": "constructor",
+          "args": [],
+          "expected": null
+        },
+        {
+          "method": "add",
+          "args": [
+            [
+              3,
+              10
+            ]
+          ],
+          "expected": null
+        },
+        {
+          "method": "add",
+          "args": [
+            [
+              11,
+              2
+            ]
+          ],
+          "expected": null
+        },
+        {
+          "method": "add",
+          "args": [
+            [
+              3,
+              2
+            ]
+          ],
+          "expected": null
+        },
+        {
+          "method": "count",
+          "args": [
+            [
+              11,
+              10
+            ]
+          ],
+          "expected": 1
+        },
+        {
+          "method": "count",
+          "args": [
+            [
+              14,
+              8
+            ]
+          ],
+          "expected": 0
+        },
+        {
+          "method": "add",
+          "args": [
+            [
+              11,
+              2
+            ]
+          ],
+          "expected": null
+        },
+        {
+          "method": "count",
+          "args": [
+            [
+              11,
+              10
+            ]
+          ],
+          "expected": 2
+        }
+      ]
+    },
+    {
+      "name": "unit square and duplicates",
+      "steps": [
+        {
+          "method": "constructor",
+          "args": [],
+          "expected": null
+        },
+        {
+          "method": "add",
+          "args": [
+            [
+              0,
+              0
+            ]
+          ],
+          "expected": null
+        },
+        {
+          "method": "add",
+          "args": [
+            [
+              1,
+              0
+            ]
+          ],
+          "expected": null
+        },
+        {
+          "method": "add",
+          "args": [
+            [
+              0,
+              1
+            ]
+          ],
+          "expected": null
+        },
+        {
+          "method": "add",
+          "args": [
+            [
+              1,
+              1
+            ]
+          ],
+          "expected": null
+        },
+        {
+          "method": "count",
+          "args": [
+            [
+              0,
+              0
+            ]
+          ],
+          "expected": 1
+        },
+        {
+          "method": "count",
+          "args": [
+            [
+              2,
+              2
+            ]
+          ],
+          "expected": 0
+        },
+        {
+          "method": "add",
+          "args": [
+            [
+              1,
+              1
+            ]
+          ],
+          "expected": null
+        },
+        {
+          "method": "count",
+          "args": [
+            [
+              0,
+              0
+            ]
+          ],
+          "expected": 2
+        }
+      ]
+    },
+    {
+      "name": "zero-area squares do not count",
+      "steps": [
+        {
+          "method": "constructor",
+          "args": [],
+          "expected": null
+        },
+        {
+          "method": "add",
+          "args": [
+            [
+              1,
+              1
+            ]
+          ],
+          "expected": null
+        },
+        {
+          "method": "add",
+          "args": [
+            [
+              1,
+              1
+            ]
+          ],
+          "expected": null
+        },
+        {
+          "method": "count",
+          "args": [
+            [
+              1,
+              1
+            ]
+          ],
+          "expected": 0
+        }
+      ]
+    }
+  ]
+}

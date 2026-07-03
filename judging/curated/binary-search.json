@@ -1,0 +1,90 @@
+{
+  "id": "binary-search",
+  "kind": "function",
+  "entry": "binarySearch",
+  "names": {
+    "python": "binary_search"
+  },
+  "argTypes": [
+    "any",
+    "any"
+  ],
+  "returnType": "any",
+  "comparator": "exact",
+  "cases": [
+    {
+      "name": "should return the correct index when target is present",
+      "args": [
+        [
+          -1,
+          0,
+          2,
+          4,
+          6,
+          8
+        ],
+        4
+      ],
+      "expected": 3
+    },
+    {
+      "name": "should return the correct index when target is present",
+      "args": [
+        [
+          -10,
+          -5,
+          0,
+          3,
+          5,
+          9,
+          12
+        ],
+        -10
+      ],
+      "expected": 0
+    },
+    {
+      "name": "should return -1 when target is not present",
+      "args": [
+        [
+          -1,
+          0,
+          2,
+          4,
+          6,
+          8
+        ],
+        3
+      ],
+      "expected": -1
+    },
+    {
+      "name": "should return -1 for an empty array",
+      "args": [
+        [],
+        3
+      ],
+      "expected": -1
+    },
+    {
+      "name": "should handle single element arrays",
+      "args": [
+        [
+          5
+        ],
+        5
+      ],
+      "expected": 0
+    },
+    {
+      "name": "should handle single element arrays",
+      "args": [
+        [
+          5
+        ],
+        1
+      ],
+      "expected": -1
+    }
+  ]
+}

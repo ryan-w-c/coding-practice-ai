@@ -1,0 +1,79 @@
+{
+  "id": "maximum-product-subarray",
+  "kind": "function",
+  "entry": "maxProduct",
+  "names": {
+    "python": "max_product"
+  },
+  "argTypes": [
+    "int[]"
+  ],
+  "returnType": "int",
+  "comparator": "exact",
+  "cases": [
+    {
+      "name": "classic 2,3,-2,4",
+      "args": [
+        [
+          2,
+          3,
+          -2,
+          4
+        ]
+      ],
+      "expected": 6
+    },
+    {
+      "name": "zero splits",
+      "args": [
+        [
+          -2,
+          0,
+          -1
+        ]
+      ],
+      "expected": 0
+    },
+    {
+      "name": "single negative",
+      "args": [
+        [
+          -2
+        ]
+      ],
+      "expected": -2
+    },
+    {
+      "name": "two negatives multiply",
+      "args": [
+        [
+          -2,
+          -3
+        ]
+      ],
+      "expected": 6
+    },
+    {
+      "name": "negative pair around positive",
+      "args": [
+        [
+          -2,
+          3,
+          -4
+        ]
+      ],
+      "expected": 24
+    },
+    {
+      "name": "positive run",
+      "args": [
+        [
+          3,
+          -1,
+          4
+        ]
+      ],
+      "expected": 4
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "id": "three-sum",
+  "kind": "function",
+  "entry": "threeSum",
+  "names": {
+    "python": "three_sum"
+  },
+  "argTypes": [
+    "any"
+  ],
+  "returnType": "any",
+  "comparator": "unordered-nested",
+  "cases": [
+    {
+      "name": "should return the correct triplets for the first test case",
+      "args": [
+        [
+          -1,
+          0,
+          1,
+          2,
+          -1,
+          -4
+        ]
+      ],
+      "expected": [
+        [
+          -1,
+          -1,
+          2
+        ],
+        [
+          -1,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "name": "should return an empty array if no triplets sum to zero",
+      "args": [
+        [
+          0,
+          1,
+          1
+        ]
+      ],
+      "expected": []
+    },
+    {
+      "name": "should return one triplet if all elements are zero",
+      "args": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "expected": [
+        [
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "name": "should handle arrays with no possible combinations",
+      "args": [
+        [
+          1,
+          2,
+          3
+        ]
+      ],
+      "expected": []
+    },
+    {
+      "name": "should handle larger inputs correctly",
+      "args": [
+        [
+          -2,
+          0,
+          1,
+          1,
+          2
+        ]
+      ],
+      "expected": [
+        [
+          -2,
+          0,
+          2
+        ],
+        [
+          -2,
+          1,
+          1
+        ]
+      ]
+    }
+  ]
+}

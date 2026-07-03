@@ -1,0 +1,82 @@
+{
+  "id": "binary-tree-diameter",
+  "kind": "function",
+  "entry": "diameterOfBinaryTree",
+  "names": {
+    "python": "diameter_of_binary_tree"
+  },
+  "argTypes": [
+    "TreeNode"
+  ],
+  "returnType": "any",
+  "comparator": "exact",
+  "cases": [
+    {
+      "name": "should return correct diameter for Example 1",
+      "args": [
+        [
+          1,
+          null,
+          2,
+          3,
+          4,
+          5,
+          0
+        ]
+      ],
+      "expected": 3
+    },
+    {
+      "name": "should return correct diameter for Example 2",
+      "args": [
+        [
+          1,
+          2,
+          3
+        ]
+      ],
+      "expected": 2
+    },
+    {
+      "name": "should handle a single-node tree",
+      "args": [
+        [
+          1
+        ]
+      ],
+      "expected": 0
+    },
+    {
+      "name": "should handle a tree with multiple levels",
+      "args": [
+        [
+          1,
+          2,
+          null,
+          3,
+          null,
+          4,
+          null,
+          5,
+          0
+        ]
+      ],
+      "expected": 4
+    },
+    {
+      "name": "should handle a balanced tree",
+      "args": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      ],
+      "expected": 4
+    }
+  ]
+}

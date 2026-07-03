@@ -1,0 +1,167 @@
+{
+  "id": "count-number-of-islands",
+  "kind": "function",
+  "entry": "numIslands",
+  "names": {
+    "python": "num_islands"
+  },
+  "argTypes": [
+    "any"
+  ],
+  "returnType": "any",
+  "comparator": "exact",
+  "cases": [
+    {
+      "name": "should return 1 for a single island",
+      "args": [
+        [
+          [
+            "0",
+            "1",
+            "1",
+            "1",
+            "0"
+          ],
+          [
+            "0",
+            "1",
+            "0",
+            "1",
+            "0"
+          ],
+          [
+            "1",
+            "1",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        ]
+      ],
+      "expected": 1
+    },
+    {
+      "name": "should return 4 for multiple separate islands",
+      "args": [
+        [
+          [
+            "1",
+            "1",
+            "0",
+            "0",
+            "1"
+          ],
+          [
+            "1",
+            "1",
+            "0",
+            "0",
+            "1"
+          ],
+          [
+            "0",
+            "0",
+            "1",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "1",
+            "1"
+          ]
+        ]
+      ],
+      "expected": 4
+    },
+    {
+      "name": "should return 0 for all water",
+      "args": [
+        [
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ]
+        ]
+      ],
+      "expected": 0
+    },
+    {
+      "name": "should return 1 for a grid with all land",
+      "args": [
+        [
+          [
+            "1",
+            "1",
+            "1"
+          ],
+          [
+            "1",
+            "1",
+            "1"
+          ],
+          [
+            "1",
+            "1",
+            "1"
+          ]
+        ]
+      ],
+      "expected": 1
+    },
+    {
+      "name": "should handle a single row grid",
+      "args": [
+        [
+          [
+            "1",
+            "0",
+            "1",
+            "1"
+          ]
+        ]
+      ],
+      "expected": 2
+    },
+    {
+      "name": "should handle a single column grid",
+      "args": [
+        [
+          [
+            "1"
+          ],
+          [
+            "0"
+          ],
+          [
+            "1"
+          ],
+          [
+            "1"
+          ]
+        ]
+      ],
+      "expected": 2
+    }
+  ]
+}

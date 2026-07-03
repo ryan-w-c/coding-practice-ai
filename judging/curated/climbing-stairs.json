@@ -1,0 +1,57 @@
+{
+  "id": "climbing-stairs",
+  "kind": "function",
+  "entry": "climbStairs",
+  "names": {
+    "python": "climb_stairs"
+  },
+  "argTypes": [
+    "int"
+  ],
+  "returnType": "int",
+  "comparator": "exact",
+  "cases": [
+    {
+      "name": "n=2",
+      "args": [
+        2
+      ],
+      "expected": 2
+    },
+    {
+      "name": "n=3",
+      "args": [
+        3
+      ],
+      "expected": 3
+    },
+    {
+      "name": "n=4",
+      "args": [
+        4
+      ],
+      "expected": 5
+    },
+    {
+      "name": "n=1",
+      "args": [
+        1
+      ],
+      "expected": 1
+    },
+    {
+      "name": "n=6",
+      "args": [
+        6
+      ],
+      "expected": 13
+    },
+    {
+      "name": "n=7",
+      "args": [
+        7
+      ],
+      "expected": 21
+    }
+  ]
+}

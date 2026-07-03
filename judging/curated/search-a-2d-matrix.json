@@ -1,0 +1,132 @@
+{
+  "id": "search-a-2d-matrix",
+  "kind": "function",
+  "entry": "searchMatrix",
+  "names": {
+    "python": "search_matrix"
+  },
+  "argTypes": [
+    "any",
+    "any"
+  ],
+  "returnType": "any",
+  "comparator": "exact",
+  "cases": [
+    {
+      "name": "should return true if target exists in matrix",
+      "args": [
+        [
+          [
+            1,
+            2,
+            4,
+            8
+          ],
+          [
+            10,
+            11,
+            12,
+            13
+          ],
+          [
+            14,
+            20,
+            30,
+            40
+          ]
+        ],
+        10
+      ],
+      "expected": true
+    },
+    {
+      "name": "should return false if target does not exist in matrix",
+      "args": [
+        [
+          [
+            1,
+            2,
+            4,
+            8
+          ],
+          [
+            10,
+            11,
+            12,
+            13
+          ],
+          [
+            14,
+            20,
+            30,
+            40
+          ]
+        ],
+        15
+      ],
+      "expected": false
+    },
+    {
+      "name": "should return true for target at the beginning",
+      "args": [
+        [
+          [
+            1,
+            2,
+            4,
+            8
+          ],
+          [
+            10,
+            11,
+            12,
+            13
+          ],
+          [
+            14,
+            20,
+            30,
+            40
+          ]
+        ],
+        1
+      ],
+      "expected": true
+    },
+    {
+      "name": "should return true for target at the end",
+      "args": [
+        [
+          [
+            1,
+            2,
+            4,
+            8
+          ],
+          [
+            10,
+            11,
+            12,
+            13
+          ],
+          [
+            14,
+            20,
+            30,
+            40
+          ]
+        ],
+        40
+      ],
+      "expected": true
+    },
+    {
+      "name": "should return false for an empty matrix",
+      "args": [
+        [],
+        5
+      ],
+      "expected": false
+    }
+  ]
+}

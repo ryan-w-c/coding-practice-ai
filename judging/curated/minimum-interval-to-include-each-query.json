@@ -1,0 +1,151 @@
+{
+  "id": "minimum-interval-to-include-each-query",
+  "kind": "function",
+  "entry": "minInterval",
+  "names": {
+    "python": "min_interval"
+  },
+  "argTypes": [
+    "int[][]",
+    "int[]"
+  ],
+  "returnType": "int[]",
+  "comparator": "exact",
+  "cases": [
+    {
+      "name": "classic example",
+      "args": [
+        [
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            4,
+            4
+          ]
+        ],
+        [
+          2,
+          3,
+          4,
+          5
+        ]
+      ],
+      "expected": [
+        3,
+        3,
+        1,
+        4
+      ]
+    },
+    {
+      "name": "second example",
+      "args": [
+        [
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            20,
+            25
+          ]
+        ],
+        [
+          2,
+          19,
+          5,
+          22
+        ]
+      ],
+      "expected": [
+        2,
+        -1,
+        4,
+        6
+      ]
+    },
+    {
+      "name": "point interval",
+      "args": [
+        [
+          [
+            1,
+            1
+          ]
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "expected": [
+        1,
+        -1
+      ]
+    },
+    {
+      "name": "nested intervals",
+      "args": [
+        [
+          [
+            1,
+            10
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            4
+          ]
+        ],
+        [
+          4,
+          1,
+          6
+        ]
+      ],
+      "expected": [
+        1,
+        10,
+        10
+      ]
+    },
+    {
+      "name": "query before all",
+      "args": [
+        [
+          [
+            5,
+            6
+          ]
+        ],
+        [
+          1
+        ]
+      ],
+      "expected": [
+        -1
+      ]
+    }
+  ]
+}

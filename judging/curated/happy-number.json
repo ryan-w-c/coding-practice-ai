@@ -1,0 +1,57 @@
+{
+  "id": "happy-number",
+  "kind": "function",
+  "entry": "isHappy",
+  "names": {
+    "python": "is_happy"
+  },
+  "argTypes": [
+    "int"
+  ],
+  "returnType": "bool",
+  "comparator": "exact",
+  "cases": [
+    {
+      "name": "nineteen is happy",
+      "args": [
+        19
+      ],
+      "expected": true
+    },
+    {
+      "name": "two is not",
+      "args": [
+        2
+      ],
+      "expected": false
+    },
+    {
+      "name": "one is happy",
+      "args": [
+        1
+      ],
+      "expected": true
+    },
+    {
+      "name": "seven is happy",
+      "args": [
+        7
+      ],
+      "expected": true
+    },
+    {
+      "name": "cycle via 89",
+      "args": [
+        116
+      ],
+      "expected": false
+    },
+    {
+      "name": "hundred is happy",
+      "args": [
+        100
+      ],
+      "expected": true
+    }
+  ]
+}

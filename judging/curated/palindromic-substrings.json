@@ -1,0 +1,22 @@
+{
+  "id": "palindromic-substrings",
+  "kind": "function",
+  "entry": "countSubstrings",
+  "names": {
+    "python": "count_substrings"
+  },
+  "argTypes": [
+    "any"
+  ],
+  "returnType": "any",
+  "comparator": "exact",
+  "cases": [
+    {
+      "name": "Mixed palindromes",
+      "args": [
+        "abccba"
+      ],
+      "expected": 9
+    }
+  ]
+}

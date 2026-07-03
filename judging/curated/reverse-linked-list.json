@@ -1,0 +1,69 @@
+{
+  "id": "reverse-linked-list",
+  "kind": "function",
+  "entry": "reverseList",
+  "names": {
+    "python": "reverse_list"
+  },
+  "argTypes": [
+    "ListNode"
+  ],
+  "returnType": "ListNode",
+  "comparator": "linkedlist",
+  "cases": [
+    {
+      "name": "basic",
+      "args": [
+        [
+          0,
+          1,
+          2,
+          3
+        ]
+      ],
+      "expected": [
+        3,
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "name": "empty",
+      "args": [
+        []
+      ],
+      "expected": []
+    },
+    {
+      "name": "single",
+      "args": [
+        [
+          7
+        ]
+      ],
+      "expected": [
+        7
+      ]
+    },
+    {
+      "name": "five",
+      "args": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      ],
+      "expected": [
+        5,
+        4,
+        3,
+        2,
+        1
+      ]
+    }
+  ]
+}

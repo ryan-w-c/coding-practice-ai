@@ -1,0 +1,57 @@
+{
+  "id": "longest-palindromic-substring",
+  "kind": "function",
+  "entry": "longestPalindrome",
+  "names": {
+    "python": "longest_palindrome"
+  },
+  "argTypes": [
+    "string"
+  ],
+  "returnType": "string",
+  "comparator": "exact",
+  "cases": [
+    {
+      "name": "bb in abbc",
+      "args": [
+        "abbc"
+      ],
+      "expected": "bb"
+    },
+    {
+      "name": "single character",
+      "args": [
+        "a"
+      ],
+      "expected": "a"
+    },
+    {
+      "name": "whole string",
+      "args": [
+        "racecar"
+      ],
+      "expected": "racecar"
+    },
+    {
+      "name": "bb in cbbd",
+      "args": [
+        "cbbd"
+      ],
+      "expected": "bb"
+    },
+    {
+      "name": "long middle palindrome",
+      "args": [
+        "forgeeksskeegfor"
+      ],
+      "expected": "geeksskeeg"
+    },
+    {
+      "name": "aba at both ends",
+      "args": [
+        "abacdfgdcaba"
+      ],
+      "expected": "aba"
+    }
+  ]
+}

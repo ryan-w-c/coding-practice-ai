@@ -1,0 +1,81 @@
+{
+  "id": "contains-duplicate",
+  "kind": "function",
+  "entry": "hasDuplicate",
+  "names": {
+    "python": "has_duplicate"
+  },
+  "argTypes": [
+    "int[]"
+  ],
+  "returnType": "bool",
+  "comparator": "exact",
+  "cases": [
+    {
+      "name": "has a duplicate",
+      "args": [
+        [
+          1,
+          2,
+          3,
+          3
+        ]
+      ],
+      "expected": true
+    },
+    {
+      "name": "all unique",
+      "args": [
+        [
+          1,
+          2,
+          3,
+          4
+        ]
+      ],
+      "expected": false
+    },
+    {
+      "name": "empty",
+      "args": [
+        []
+      ],
+      "expected": false
+    },
+    {
+      "name": "all same",
+      "args": [
+        [
+          5,
+          5,
+          5,
+          5,
+          5
+        ]
+      ],
+      "expected": true
+    },
+    {
+      "name": "single",
+      "args": [
+        [
+          42
+        ]
+      ],
+      "expected": false
+    },
+    {
+      "name": "mixed",
+      "args": [
+        [
+          1,
+          2,
+          2,
+          3,
+          3
+        ]
+      ],
+      "expected": true
+    }
+  ]
+}

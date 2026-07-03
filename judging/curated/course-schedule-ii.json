@@ -1,0 +1,142 @@
+{
+  "id": "course-schedule-ii",
+  "kind": "function",
+  "entry": "findOrder",
+  "names": {
+    "python": "find_order"
+  },
+  "argTypes": [
+    "int",
+    "int[][]"
+  ],
+  "returnType": "int[]",
+  "comparator": "exact",
+  "cases": [
+    {
+      "name": "chain of four",
+      "args": [
+        4,
+        [
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            2
+          ]
+        ]
+      ],
+      "expected": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "name": "reverse chain",
+      "args": [
+        3,
+        [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ]
+        ]
+      ],
+      "expected": [
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "name": "single course",
+      "args": [
+        1,
+        []
+      ],
+      "expected": [
+        0
+      ]
+    },
+    {
+      "name": "chain of five",
+      "args": [
+        5,
+        [
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            4,
+            3
+          ]
+        ]
+      ],
+      "expected": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "name": "two-course cycle",
+      "args": [
+        2,
+        [
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            1
+          ]
+        ]
+      ],
+      "expected": []
+    },
+    {
+      "name": "three-course cycle",
+      "args": [
+        3,
+        [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            0
+          ]
+        ]
+      ],
+      "expected": []
+    }
+  ]
+}

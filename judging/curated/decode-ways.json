@@ -1,0 +1,71 @@
+{
+  "id": "decode-ways",
+  "kind": "function",
+  "entry": "numDecodings",
+  "names": {
+    "python": "num_decodings"
+  },
+  "argTypes": [
+    "string"
+  ],
+  "returnType": "int",
+  "comparator": "exact",
+  "cases": [
+    {
+      "name": "12 has two decodings",
+      "args": [
+        "12"
+      ],
+      "expected": 2
+    },
+    {
+      "name": "226 has three",
+      "args": [
+        "226"
+      ],
+      "expected": 3
+    },
+    {
+      "name": "leading zero",
+      "args": [
+        "06"
+      ],
+      "expected": 0
+    },
+    {
+      "name": "lone zero",
+      "args": [
+        "0"
+      ],
+      "expected": 0
+    },
+    {
+      "name": "10 decodes once",
+      "args": [
+        "10"
+      ],
+      "expected": 1
+    },
+    {
+      "name": "27 exceeds 26",
+      "args": [
+        "27"
+      ],
+      "expected": 1
+    },
+    {
+      "name": "zero forces pairing",
+      "args": [
+        "11106"
+      ],
+      "expected": 2
+    },
+    {
+      "name": "single digit",
+      "args": [
+        "1"
+      ],
+      "expected": 1
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "id": "validate-parentheses",
+  "kind": "function",
+  "entry": "isValid",
+  "names": {
+    "python": "is_valid"
+  },
+  "argTypes": [
+    "any"
+  ],
+  "returnType": "any",
+  "comparator": "exact",
+  "cases": [
+    {
+      "name": "should return true for a simple valid case",
+      "args": [
+        "[]"
+      ],
+      "expected": true
+    },
+    {
+      "name": "should return true for nested valid brackets",
+      "args": [
+        "([{}])"
+      ],
+      "expected": true
+    },
+    {
+      "name": "should return false for incorrect order",
+      "args": [
+        "[(])"
+      ],
+      "expected": false
+    },
+    {
+      "name": "should return false for unmatched opening bracket",
+      "args": [
+        "["
+      ],
+      "expected": false
+    },
+    {
+      "name": "should return false for unmatched closing bracket",
+      "args": [
+        "}"
+      ],
+      "expected": false
+    },
+    {
+      "name": "should return true for multiple independent pairs",
+      "args": [
+        "{}[]()"
+      ],
+      "expected": true
+    },
+    {
+      "name": "should return false for partially correct nesting",
+      "args": [
+        "([)]"
+      ],
+      "expected": false
+    }
+  ]
+}

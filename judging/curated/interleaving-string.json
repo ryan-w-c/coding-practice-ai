@@ -1,0 +1,80 @@
+{
+  "id": "interleaving-string",
+  "kind": "function",
+  "entry": "isInterleave",
+  "names": {
+    "python": "is_interleave"
+  },
+  "argTypes": [
+    "string",
+    "string",
+    "string"
+  ],
+  "returnType": "bool",
+  "comparator": "exact",
+  "cases": [
+    {
+      "name": "classic true",
+      "args": [
+        "aabcc",
+        "dbbca",
+        "aadbbcbcac"
+      ],
+      "expected": true
+    },
+    {
+      "name": "classic false",
+      "args": [
+        "aabcc",
+        "dbbca",
+        "aadbbbaccc"
+      ],
+      "expected": false
+    },
+    {
+      "name": "all empty",
+      "args": [
+        "",
+        "",
+        ""
+      ],
+      "expected": true
+    },
+    {
+      "name": "one side empty",
+      "args": [
+        "",
+        "b",
+        "b"
+      ],
+      "expected": true
+    },
+    {
+      "name": "other side empty",
+      "args": [
+        "a",
+        "",
+        "a"
+      ],
+      "expected": true
+    },
+    {
+      "name": "order violated",
+      "args": [
+        "ab",
+        "cd",
+        "abdc"
+      ],
+      "expected": false
+    },
+    {
+      "name": "length mismatch",
+      "args": [
+        "a",
+        "b",
+        "abc"
+      ],
+      "expected": false
+    }
+  ]
+}

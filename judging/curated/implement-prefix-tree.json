@@ -1,0 +1,181 @@
+{
+  "id": "implement-prefix-tree",
+  "kind": "sequence",
+  "class": "Trie",
+  "names": {
+    "python": "Trie"
+  },
+  "comparator": "exact",
+  "cases": [
+    {
+      "name": "classic apple/app example",
+      "steps": [
+        {
+          "method": "constructor",
+          "args": [],
+          "expected": null
+        },
+        {
+          "method": "insert",
+          "args": [
+            "apple"
+          ],
+          "expected": null
+        },
+        {
+          "method": "search",
+          "args": [
+            "apple"
+          ],
+          "expected": true
+        },
+        {
+          "method": "search",
+          "args": [
+            "app"
+          ],
+          "expected": false
+        },
+        {
+          "method": "startsWith",
+          "args": [
+            "app"
+          ],
+          "expected": true
+        },
+        {
+          "method": "insert",
+          "args": [
+            "app"
+          ],
+          "expected": null
+        },
+        {
+          "method": "search",
+          "args": [
+            "app"
+          ],
+          "expected": true
+        }
+      ]
+    },
+    {
+      "name": "prefix is not a word",
+      "steps": [
+        {
+          "method": "constructor",
+          "args": [],
+          "expected": null
+        },
+        {
+          "method": "startsWith",
+          "args": [
+            "x"
+          ],
+          "expected": false
+        },
+        {
+          "method": "insert",
+          "args": [
+            "ab"
+          ],
+          "expected": null
+        },
+        {
+          "method": "search",
+          "args": [
+            "abc"
+          ],
+          "expected": false
+        },
+        {
+          "method": "search",
+          "args": [
+            "ab"
+          ],
+          "expected": true
+        },
+        {
+          "method": "startsWith",
+          "args": [
+            "abc"
+          ],
+          "expected": false
+        },
+        {
+          "method": "startsWith",
+          "args": [
+            "a"
+          ],
+          "expected": true
+        }
+      ]
+    },
+    {
+      "name": "overlapping words",
+      "steps": [
+        {
+          "method": "constructor",
+          "args": [],
+          "expected": null
+        },
+        {
+          "method": "insert",
+          "args": [
+            "car"
+          ],
+          "expected": null
+        },
+        {
+          "method": "insert",
+          "args": [
+            "card"
+          ],
+          "expected": null
+        },
+        {
+          "method": "insert",
+          "args": [
+            "care"
+          ],
+          "expected": null
+        },
+        {
+          "method": "search",
+          "args": [
+            "car"
+          ],
+          "expected": true
+        },
+        {
+          "method": "search",
+          "args": [
+            "ca"
+          ],
+          "expected": false
+        },
+        {
+          "method": "startsWith",
+          "args": [
+            "care"
+          ],
+          "expected": true
+        },
+        {
+          "method": "search",
+          "args": [
+            "cared"
+          ],
+          "expected": false
+        },
+        {
+          "method": "search",
+          "args": [
+            "card"
+          ],
+          "expected": true
+        }
+      ]
+    }
+  ]
+}

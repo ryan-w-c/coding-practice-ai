@@ -1,0 +1,112 @@
+{
+  "id": "palindrome-partitioning",
+  "kind": "function",
+  "entry": "partition",
+  "names": {
+    "python": "partition"
+  },
+  "argTypes": [
+    "any"
+  ],
+  "returnType": "any",
+  "comparator": "unordered",
+  "cases": [
+    {
+      "name": "Example 1",
+      "args": [
+        "aab"
+      ],
+      "expected": [
+        [
+          "a",
+          "a",
+          "b"
+        ],
+        [
+          "aa",
+          "b"
+        ]
+      ]
+    },
+    {
+      "name": "Example 2",
+      "args": [
+        "a"
+      ],
+      "expected": [
+        [
+          "a"
+        ]
+      ]
+    },
+    {
+      "name": "Single character repeated",
+      "args": [
+        "aaa"
+      ],
+      "expected": [
+        [
+          "a",
+          "a",
+          "a"
+        ],
+        [
+          "a",
+          "aa"
+        ],
+        [
+          "aa",
+          "a"
+        ],
+        [
+          "aaa"
+        ]
+      ]
+    },
+    {
+      "name": "No palindromic splits",
+      "args": [
+        "abc"
+      ],
+      "expected": [
+        [
+          "a",
+          "b",
+          "c"
+        ]
+      ]
+    },
+    {
+      "name": "Mixed characters",
+      "args": [
+        "racecar"
+      ],
+      "expected": [
+        [
+          "r",
+          "a",
+          "c",
+          "e",
+          "c",
+          "a",
+          "r"
+        ],
+        [
+          "r",
+          "a",
+          "cec",
+          "a",
+          "r"
+        ],
+        [
+          "r",
+          "aceca",
+          "r"
+        ],
+        [
+          "racecar"
+        ]
+      ]
+    }
+  ]
+}

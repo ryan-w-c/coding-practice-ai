@@ -1,0 +1,85 @@
+{
+  "id": "target-sum",
+  "kind": "function",
+  "entry": "findTargetSumWays",
+  "names": {
+    "python": "find_target_sum_ways"
+  },
+  "argTypes": [
+    "int[]",
+    "int"
+  ],
+  "returnType": "int",
+  "comparator": "exact",
+  "cases": [
+    {
+      "name": "five ones to three",
+      "args": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        3
+      ],
+      "expected": 5
+    },
+    {
+      "name": "single hit",
+      "args": [
+        [
+          1
+        ],
+        1
+      ],
+      "expected": 1
+    },
+    {
+      "name": "single miss",
+      "args": [
+        [
+          1
+        ],
+        2
+      ],
+      "expected": 0
+    },
+    {
+      "name": "zeros double the ways",
+      "args": [
+        [
+          0,
+          0,
+          1
+        ],
+        1
+      ],
+      "expected": 4
+    },
+    {
+      "name": "two elements",
+      "args": [
+        [
+          2,
+          1
+        ],
+        1
+      ],
+      "expected": 1
+    },
+    {
+      "name": "balance to zero",
+      "args": [
+        [
+          1,
+          2,
+          3
+        ],
+        0
+      ],
+      "expected": 2
+    }
+  ]
+}

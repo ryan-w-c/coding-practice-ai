@@ -1,0 +1,105 @@
+{
+  "id": "two-integer-sum",
+  "kind": "function",
+  "entry": "twoSum",
+  "names": {
+    "python": "two_sum"
+  },
+  "argTypes": [
+    "int[]",
+    "int"
+  ],
+  "returnType": "int[]",
+  "comparator": "unordered",
+  "cases": [
+    {
+      "name": "basic",
+      "args": [
+        [
+          3,
+          4,
+          5,
+          6
+        ],
+        7
+      ],
+      "expected": [
+        0,
+        1
+      ]
+    },
+    {
+      "name": "middle",
+      "args": [
+        [
+          4,
+          5,
+          6
+        ],
+        10
+      ],
+      "expected": [
+        0,
+        2
+      ]
+    },
+    {
+      "name": "duplicate values",
+      "args": [
+        [
+          5,
+          5
+        ],
+        10
+      ],
+      "expected": [
+        0,
+        1
+      ]
+    },
+    {
+      "name": "negatives",
+      "args": [
+        [
+          -3,
+          4,
+          3,
+          90
+        ],
+        0
+      ],
+      "expected": [
+        0,
+        2
+      ]
+    },
+    {
+      "name": "large numbers",
+      "args": [
+        [
+          10000000,
+          -10000000
+        ],
+        0
+      ],
+      "expected": [
+        0,
+        1
+      ]
+    },
+    {
+      "name": "minimal",
+      "args": [
+        [
+          1,
+          1
+        ],
+        2
+      ],
+      "expected": [
+        0,
+        1
+      ]
+    }
+  ]
+}

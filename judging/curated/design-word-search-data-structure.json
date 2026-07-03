@@ -1,0 +1,174 @@
+{
+  "id": "design-word-search-data-structure",
+  "kind": "sequence",
+  "class": "WordDictionary",
+  "names": {
+    "python": "WordDictionary"
+  },
+  "comparator": "exact",
+  "cases": [
+    {
+      "name": "classic bad/dad/mad with wildcards",
+      "steps": [
+        {
+          "method": "constructor",
+          "args": [],
+          "expected": null
+        },
+        {
+          "method": "addWord",
+          "args": [
+            "bad"
+          ],
+          "expected": null
+        },
+        {
+          "method": "addWord",
+          "args": [
+            "dad"
+          ],
+          "expected": null
+        },
+        {
+          "method": "addWord",
+          "args": [
+            "mad"
+          ],
+          "expected": null
+        },
+        {
+          "method": "search",
+          "args": [
+            "pad"
+          ],
+          "expected": false
+        },
+        {
+          "method": "search",
+          "args": [
+            "bad"
+          ],
+          "expected": true
+        },
+        {
+          "method": "search",
+          "args": [
+            ".ad"
+          ],
+          "expected": true
+        },
+        {
+          "method": "search",
+          "args": [
+            "b.."
+          ],
+          "expected": true
+        }
+      ]
+    },
+    {
+      "name": "wildcards respect word length",
+      "steps": [
+        {
+          "method": "constructor",
+          "args": [],
+          "expected": null
+        },
+        {
+          "method": "addWord",
+          "args": [
+            "a"
+          ],
+          "expected": null
+        },
+        {
+          "method": "addWord",
+          "args": [
+            "ab"
+          ],
+          "expected": null
+        },
+        {
+          "method": "search",
+          "args": [
+            "a"
+          ],
+          "expected": true
+        },
+        {
+          "method": "search",
+          "args": [
+            "."
+          ],
+          "expected": true
+        },
+        {
+          "method": "search",
+          "args": [
+            "a."
+          ],
+          "expected": true
+        },
+        {
+          "method": "search",
+          "args": [
+            "b."
+          ],
+          "expected": false
+        },
+        {
+          "method": "search",
+          "args": [
+            ".."
+          ],
+          "expected": true
+        },
+        {
+          "method": "search",
+          "args": [
+            "..."
+          ],
+          "expected": false
+        }
+      ]
+    },
+    {
+      "name": "empty dictionary then one word",
+      "steps": [
+        {
+          "method": "constructor",
+          "args": [],
+          "expected": null
+        },
+        {
+          "method": "search",
+          "args": [
+            "."
+          ],
+          "expected": false
+        },
+        {
+          "method": "addWord",
+          "args": [
+            "z"
+          ],
+          "expected": null
+        },
+        {
+          "method": "search",
+          "args": [
+            "."
+          ],
+          "expected": true
+        },
+        {
+          "method": "search",
+          "args": [
+            "z"
+          ],
+          "expected": true
+        }
+      ]
+    }
+  ]
+}

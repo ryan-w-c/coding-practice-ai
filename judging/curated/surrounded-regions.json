@@ -1,0 +1,176 @@
+{
+  "id": "surrounded-regions",
+  "kind": "function",
+  "entry": "solve",
+  "names": {
+    "python": "solve"
+  },
+  "argTypes": [
+    "string[][]"
+  ],
+  "returnType": "string[][]",
+  "comparator": "exact",
+  "resultFrom": 0,
+  "cases": [
+    {
+      "name": "captured center region",
+      "args": [
+        [
+          [
+            "X",
+            "X",
+            "X",
+            "X"
+          ],
+          [
+            "X",
+            "O",
+            "O",
+            "X"
+          ],
+          [
+            "X",
+            "O",
+            "O",
+            "X"
+          ],
+          [
+            "X",
+            "X",
+            "X",
+            "O"
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          "X",
+          "X",
+          "X",
+          "X"
+        ],
+        [
+          "X",
+          "X",
+          "X",
+          "X"
+        ],
+        [
+          "X",
+          "X",
+          "X",
+          "X"
+        ],
+        [
+          "X",
+          "X",
+          "X",
+          "O"
+        ]
+      ]
+    },
+    {
+      "name": "border-connected region survives",
+      "args": [
+        [
+          [
+            "X",
+            "O",
+            "X"
+          ],
+          [
+            "O",
+            "O",
+            "X"
+          ],
+          [
+            "X",
+            "X",
+            "O"
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          "X",
+          "O",
+          "X"
+        ],
+        [
+          "O",
+          "O",
+          "X"
+        ],
+        [
+          "X",
+          "X",
+          "O"
+        ]
+      ]
+    },
+    {
+      "name": "all O board unchanged",
+      "args": [
+        [
+          [
+            "O",
+            "O"
+          ],
+          [
+            "O",
+            "O"
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          "O",
+          "O"
+        ],
+        [
+          "O",
+          "O"
+        ]
+      ]
+    },
+    {
+      "name": "single surrounded cell",
+      "args": [
+        [
+          [
+            "X",
+            "X",
+            "X"
+          ],
+          [
+            "X",
+            "O",
+            "X"
+          ],
+          [
+            "X",
+            "X",
+            "X"
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          "X",
+          "X",
+          "X"
+        ],
+        [
+          "X",
+          "X",
+          "X"
+        ],
+        [
+          "X",
+          "X",
+          "X"
+        ]
+      ]
+    }
+  ]
+}

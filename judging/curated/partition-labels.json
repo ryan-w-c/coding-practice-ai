@@ -1,0 +1,74 @@
+{
+  "id": "partition-labels",
+  "kind": "function",
+  "entry": "partitionLabels",
+  "names": {
+    "python": "partition_labels"
+  },
+  "argTypes": [
+    "string"
+  ],
+  "returnType": "int[]",
+  "comparator": "exact",
+  "cases": [
+    {
+      "name": "classic 9,7,8",
+      "args": [
+        "ababcbacadefegdehijhklij"
+      ],
+      "expected": [
+        9,
+        7,
+        8
+      ]
+    },
+    {
+      "name": "one part",
+      "args": [
+        "eccbbbbdec"
+      ],
+      "expected": [
+        10
+      ]
+    },
+    {
+      "name": "single char",
+      "args": [
+        "a"
+      ],
+      "expected": [
+        1
+      ]
+    },
+    {
+      "name": "interleaved single part",
+      "args": [
+        "abab"
+      ],
+      "expected": [
+        4
+      ]
+    },
+    {
+      "name": "all distinct",
+      "args": [
+        "abc"
+      ],
+      "expected": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "head then tangle",
+      "args": [
+        "caedbdedda"
+      ],
+      "expected": [
+        1,
+        9
+      ]
+    }
+  ]
+}

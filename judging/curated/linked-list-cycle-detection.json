@@ -1,0 +1,91 @@
+{
+  "id": "linked-list-cycle-detection",
+  "kind": "function",
+  "entry": "hasCycle",
+  "names": {
+    "python": "has_cycle"
+  },
+  "argTypes": [
+    "ListNodeCycle"
+  ],
+  "returnType": "bool",
+  "comparator": "exact",
+  "cases": [
+    {
+      "name": "cycle to middle",
+      "args": [
+        {
+          "values": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "pos": 1
+        }
+      ],
+      "expected": true
+    },
+    {
+      "name": "no cycle",
+      "args": [
+        {
+          "values": [
+            1,
+            2
+          ],
+          "pos": -1
+        }
+      ],
+      "expected": false
+    },
+    {
+      "name": "cycle to head",
+      "args": [
+        {
+          "values": [
+            1,
+            2,
+            3
+          ],
+          "pos": 0
+        }
+      ],
+      "expected": true
+    },
+    {
+      "name": "single node no cycle",
+      "args": [
+        {
+          "values": [
+            1
+          ],
+          "pos": -1
+        }
+      ],
+      "expected": false
+    },
+    {
+      "name": "self loop",
+      "args": [
+        {
+          "values": [
+            1
+          ],
+          "pos": 0
+        }
+      ],
+      "expected": true
+    },
+    {
+      "name": "empty list",
+      "args": [
+        {
+          "values": [],
+          "pos": -1
+        }
+      ],
+      "expected": false
+    }
+  ]
+}

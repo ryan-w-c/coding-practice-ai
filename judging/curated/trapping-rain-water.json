@@ -1,0 +1,93 @@
+{
+  "id": "trapping-rain-water",
+  "kind": "function",
+  "entry": "trap",
+  "names": {
+    "python": "trap"
+  },
+  "argTypes": [
+    "any"
+  ],
+  "returnType": "any",
+  "comparator": "exact",
+  "cases": [
+    {
+      "name": "Example 1",
+      "args": [
+        [
+          0,
+          2,
+          0,
+          3,
+          1,
+          0,
+          1,
+          3,
+          2,
+          1
+        ]
+      ],
+      "expected": 9
+    },
+    {
+      "name": "Flat terrain",
+      "args": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "expected": 0
+    },
+    {
+      "name": "Single peak",
+      "args": [
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "expected": 0
+    },
+    {
+      "name": "Multiple peaks",
+      "args": [
+        [
+          4,
+          2,
+          0,
+          3,
+          2,
+          5
+        ]
+      ],
+      "expected": 9
+    },
+    {
+      "name": "Ascending and descending slope",
+      "args": [
+        [
+          1,
+          2,
+          3,
+          4,
+          3,
+          2,
+          1
+        ]
+      ],
+      "expected": 0
+    },
+    {
+      "name": "Empty array",
+      "args": [
+        []
+      ],
+      "expected": 0
+    }
+  ]
+}

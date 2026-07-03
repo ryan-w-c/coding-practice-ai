@@ -1,0 +1,95 @@
+{
+  "id": "valid-tree",
+  "kind": "function",
+  "entry": "validTree",
+  "names": {
+    "python": "valid_tree"
+  },
+  "argTypes": [
+    "any",
+    "any"
+  ],
+  "returnType": "any",
+  "comparator": "exact",
+  "cases": [
+    {
+      "name": "Example 1",
+      "args": [
+        5,
+        [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            4
+          ]
+        ]
+      ],
+      "expected": true
+    },
+    {
+      "name": "Example 2",
+      "args": [
+        5,
+        [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ]
+        ]
+      ],
+      "expected": false
+    },
+    {
+      "name": "Single node tree",
+      "args": [
+        1,
+        []
+      ],
+      "expected": true
+    },
+    {
+      "name": "Disconnected graph",
+      "args": [
+        4,
+        [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      ],
+      "expected": false
+    }
+  ]
+}

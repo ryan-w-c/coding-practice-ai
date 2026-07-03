@@ -1,0 +1,157 @@
+{
+  "id": "kth-largest-integer-in-a-stream",
+  "kind": "sequence",
+  "class": "KthLargest",
+  "names": {
+    "python": "KthLargest"
+  },
+  "comparator": "exact",
+  "cases": [
+    {
+      "name": "classic k=3",
+      "steps": [
+        {
+          "method": "constructor",
+          "args": [
+            3,
+            [
+              4,
+              5,
+              8,
+              2
+            ]
+          ],
+          "expected": null
+        },
+        {
+          "method": "add",
+          "args": [
+            3
+          ],
+          "expected": 4
+        },
+        {
+          "method": "add",
+          "args": [
+            5
+          ],
+          "expected": 5
+        },
+        {
+          "method": "add",
+          "args": [
+            10
+          ],
+          "expected": 5
+        },
+        {
+          "method": "add",
+          "args": [
+            9
+          ],
+          "expected": 8
+        },
+        {
+          "method": "add",
+          "args": [
+            4
+          ],
+          "expected": 8
+        }
+      ]
+    },
+    {
+      "name": "k=1 with empty start",
+      "steps": [
+        {
+          "method": "constructor",
+          "args": [
+            1,
+            []
+          ],
+          "expected": null
+        },
+        {
+          "method": "add",
+          "args": [
+            -3
+          ],
+          "expected": -3
+        },
+        {
+          "method": "add",
+          "args": [
+            -2
+          ],
+          "expected": -2
+        },
+        {
+          "method": "add",
+          "args": [
+            -4
+          ],
+          "expected": -2
+        },
+        {
+          "method": "add",
+          "args": [
+            0
+          ],
+          "expected": 0
+        },
+        {
+          "method": "add",
+          "args": [
+            4
+          ],
+          "expected": 4
+        }
+      ]
+    },
+    {
+      "name": "duplicates count separately",
+      "steps": [
+        {
+          "method": "constructor",
+          "args": [
+            2,
+            [
+              7,
+              7,
+              7
+            ]
+          ],
+          "expected": null
+        },
+        {
+          "method": "add",
+          "args": [
+            7
+          ],
+          "expected": 7
+        },
+        {
+          "method": "add",
+          "args": [
+            1
+          ],
+          "expected": 7
+        },
+        {
+          "method": "add",
+          "args": [
+            8
+          ],
+          "expected": 7
+        },
+        {
+          "method": "add",
+          "args": [
+            9
+          ],
+          "expected": 8
+        }
+      ]
+    }
+  ]
+}
