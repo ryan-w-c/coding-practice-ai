@@ -4,6 +4,16 @@ An adaptive coding-interview trainer: pattern-based practice problems, a real mu
 
 This is **not** a wrapper around a chat window. The judge runs your actual code against generated hidden test suites (including a dual-oracle brute-force cross-check to catch bugs the obvious tests miss), and the tutor is scoped to nudge you toward the next insight rather than hand you a solution.
 
+## Screenshots
+
+**Dashboard** — mastery tracking picks what to work on next, and tracks breadth/mastery per pattern with spaced-repetition review scheduling.
+
+![Dashboard](docs/screenshots/dashboard.png)
+
+**Workspace** — problem panel (links to the source instead of reproducing it), a real code editor with Run/Submit against the judge, and the AI tutor giving a hint instead of the answer.
+
+![Workspace](docs/screenshots/workspace.png)
+
 ## Quick start
 
 Requires [Bun](https://bun.sh/), Python 3, and a JDK already on `PATH` (see [Requirements](#requirements)).
